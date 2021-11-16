@@ -59,6 +59,18 @@
         width: auto;
         right: 10%;
       }
+      
+      .multi {
+        overflow: hidden;
+      }
+
+      .glide__slide {
+        border: 1px solid black;
+        line-height: 100px;
+        margin: 0;
+        text-align: center;
+        display: inline-block;
+      }
 
       .rostertext {
         position: relative;
@@ -293,6 +305,17 @@
         max-width: 12px;
       }
     </style>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js'></script>
+    <script>
+      var glideMulti = new Glide('.multi', {
+        type: 'carousel',
+        autoplay: 2000,
+        focusAt: 'center',
+        perView: 3
+      });
+
+      glideMulti.mount();
+    </script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
       integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
@@ -673,10 +696,16 @@
       <div id="home">
         <h1>HOME</h1>
         <div class="textsection">
-          <p>
-            <img style='display: block; margin: 0 auto;' src='https://i.ibb.co/hgfN0Bt/TFM3-transparent-white-250.png'>
-            <img style='display: block; margin: 0 auto;' src='https://thumbs.gfycat.com/UnripeWickedHornet-size_restricted.gif'>
-          </p>
+          <div class="glide multi">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide">1</li>
+                <li class="glide__slide">2</li>
+                <li class="glide__slide">3</li>
+              </ul>
+            </div>
+          </div>
+          <img style='display: block; margin: 0 auto;' src='https://thumbs.gfycat.com/UnripeWickedHornet-size_restricted.gif'>
         </div>
       </div>
       <div id="synch">
