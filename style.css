@@ -1,0 +1,366 @@
+/*
+░██████╗████████╗██╗░░░██╗██╗░░░░░███████╗░██████╗██╗░░██╗███████╗███████╗████████╗
+██╔════╝╚══██╔══╝╚██╗░██╔╝██║░░░░░██╔════╝██╔════╝██║░░██║██╔════╝██╔════╝╚══██╔══╝
+╚█████╗░░░░██║░░░░╚████╔╝░██║░░░░░█████╗░░╚█████╗░███████║█████╗░░█████╗░░░░░██║░░░
+░╚═══██╗░░░██║░░░░░╚██╔╝░░██║░░░░░██╔══╝░░░╚═══██╗██╔══██║██╔══╝░░██╔══╝░░░░░██║░░░
+██████╔╝░░░██║░░░░░░██║░░░███████╗███████╗██████╔╝██║░░██║███████╗███████╗░░░██║░░░
+╚═════╝░░░░╚═╝░░░░░░╚═╝░░░╚══════╝╚══════╝╚═════╝░╚═╝░░╚═╝╚══════╝╚══════╝░░░╚═╝░░░*/
+
+
+/* background */
+/* background */
+
+html,
+body,
+#c {
+  margin: 0;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#c {
+  position: fixed;
+  z-index: -1;
+}
+
+/* banner & menu */
+/* banner & menu */
+
+.banner {
+  position: sticky;
+  top: 0;
+  margin: 0 auto;
+  display: block;
+  background: #000;
+  color: #fff;
+  font-size: 12pt;
+  width: 100%;
+  height: 20vh;
+  box-shadow: 0px -10px 20px white;
+  z-index: 1;
+}
+
+.banner a {
+  display: inline-block;
+  width: 65px;
+  padding: 1vh;
+  border: 1px solid white;
+  font-size: 10px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+
+.banner a:hover {
+  color: black;
+  background: white;
+  cursor: pointer;
+}
+
+.homebutton {
+  box-shadow: 0px 0px 10px red;
+}
+
+#burger {
+  display: none;
+}
+
+#burger:hover {
+  cursor: pointer;
+  text-shadow: 2px 2px 0px red;
+}
+
+#mobile_menu {
+  margin: 0 auto;
+  position: absolute;
+  display: none;
+  background: #000;
+  color: #fff;
+  width: auto;
+  right: 10%;
+}
+
+.banner img {
+  height: 20vh;
+}
+
+/* generic content */
+/* generic content */
+
+.main-content {
+  color: white;
+  min-height: 73vh;
+}
+
+.main-content h1 {
+  margin: 0 auto;
+  margin-top: 15px;
+  font-size: 32pt;
+  color: white;
+  text-shadow: 2px 2px 0px red;
+  text-align: center;
+}
+
+.textsection p {
+  padding: 3vh;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  margin-top: 15px;
+  text-align: left;
+  font-size: 14pt;
+  border: 1px groove white;
+  background: black;
+  opacity: 1;
+  border-radius: 10px;
+}
+
+/* initial tab style */
+/* initial tab style */
+
+#home {
+  display: block;
+}
+#roster {
+  display: none;
+}
+#synch {
+  display: none;
+}
+#news {
+  display: none;
+}
+#about {
+  display: none;
+}
+#contact {
+  display: none;
+}
+#mobile_menu {
+  display: none;
+}
+
+/* slideshow carousel */
+/* slideshow carousel */
+
+.multi {
+  position: absolute;
+  overflow: hidden;
+  width: 99vw;
+  margin: 0;
+  left: 0;
+}
+
+.glide__slide {
+  border: 2px solid white;
+  border-radius: 10px;
+  background: white;
+  line-height: 400px;
+  margin: 0;
+  text-align: center;
+  display: inline-block;
+  width: 50vw;
+}
+
+/* roster */
+/* roster */
+
+.rostertext {
+  position: relative;
+  text-shadow: -2px -1px 0px red, 2px 1px 0px black;
+  top: -100px;
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.main-content table {
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.main-content td {
+  border: 1px groove white;
+  border-radius: 10px;
+  padding: 7vw;
+}
+
+.textsection td {
+  border: none;
+  margin: 0;
+  padding: 5px;
+}
+
+#roster img {
+  height: 40vh;
+  width: 30vw;
+}
+
+/* contact */
+/* contact */
+
+.textsection form {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background: black;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.an1 {
+  max-width: 12px;
+}
+
+/* news */
+/* news */
+
+#news .textsection {
+  margin: 0 auto;
+  display: block;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 70vw;
+  color: black;
+  font-size: 16px;
+}
+
+#news p {
+  background: white;
+  color: black;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  text-align: justify;
+  font-size: 16px;
+}
+
+#news img {
+  max-width: 69.7vw;
+}
+
+.post-wrap {
+  display: block;
+  background: white;
+  border-radius: 10px;
+  color: black;
+}
+
+.card-head {
+  font-size: 16px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: black;
+  color: white;
+}
+
+/* mobile view */
+/* mobile view */
+
+@media only screen and (max-width: 640px),
+  only screen and (max-device-width: 640px) {
+  
+  .banner a {
+    display: none;
+  }
+  #mobile_menu a {
+    display: block !important;
+  }
+  #mobilemenuhead {
+    margin: 0;
+    display: block !important;
+    text-align: center;
+    text-shadow: 2px 2px 1px red;
+  }
+  .banner table {
+    width: 100%;
+  }
+  #burger {
+    display: block;
+    text-align: center;
+    font-size: 48pt;
+  }
+
+  .textsection p {
+    margin-left: 5vw !important;
+    margin-right: 5vw !important;
+  }
+
+  .textsection td {
+    display: block;
+  }
+  .textsection table {
+    margin: auto;
+  }
+  .textsection tr {
+    text-align: center;
+    margin: auto;
+  }
+
+  .textsection td img {
+    max-width: 80vw !important;
+  }
+
+  .rostertext {
+    top: -200px;
+    font-size: 38px;
+  }
+
+  #roster img {
+    width: 100vw !important;
+    height: 50vh !important;
+  }
+
+  #home .textsection {
+    margin: 0px !important;
+  }
+
+}
+
+/* desktop view */
+/* desktop view */
+
+@media only screen and (min-width: 640px),
+  only screen and (min-device-width: 640px) {
+  #mobile_menu a,
+  #mobilemenuhead {
+    display: none;
+  }
+  #home .textsection {
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+}
+
+/* footer */
+/* footer */
+
+.footer {
+  height: 5vh;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 5%,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 0.3) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  color: white;
+  margin: 0 auto;
+  padding-top: 2vh;
+  text-align: center;
+}
+
+
+/*
+▒▒▄▀▀▀▀▀▄▒▒▒▒▒▄▄▄▄▄▒▒▒
+▒▐░▄░░░▄░▌▒▒▄█▄█▄█▄█▄▒
+▒▐░▀▀░▀▀░▌▒▒▒▒▒░░░▒▒▒▒
+▒▒▀▄░═░▄▀▒▒▒▒▒▒░░░▒▒▒▒
+▒▒▐░▀▄▀░▌▒▒▒▒▒▒░░░▒▒▒▒
+*/

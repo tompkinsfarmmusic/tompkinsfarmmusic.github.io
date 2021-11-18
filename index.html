@@ -5,323 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Tompkins Farm Music</title>
+
     <link rel="icon" href="https://i.ibb.co/gzBwFdf/TFM1-black-icon-250.jpg">
-    <style>
-      html,
-      body,
-      #c {
-        margin: 0;
-        display: block;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-      #c {
-        position: fixed;
-        z-index: -1;
-      }
-      .banner {
-        position: sticky;
-        top: 0;
-        margin: 0 auto;
-        display: block;
-        background: #000;
-        color: #fff;
-        font-size: 12pt;
-        width: 100%;
-        height: 20vh;
-        box-shadow: 0px -10px 20px white;
-        z-index: 1;
-      }
-      .banner a {
-        display: inline-block;
-        width: 65px;
-        padding: 1vh;
-        border: 1px solid white;
-        font-size: 10px;
-        text-decoration: none;
-        text-align: center;
-        color: white;
-      }
-      .homebutton {
-        box-shadow: 0px 0px 10px red;
-      }
-      #burger {
-        display: none;
-      }
-      #mobile_menu {
-        margin: 0 auto;
-        position: absolute;
-        display: none;
-        background: #000;
-        color: #fff;
-        width: auto;
-        right: 10%;
-      }
-      
-      .multi {
-        position: absolute;
-        overflow: hidden;
-        width: 99vw;
-        margin: 0;
-        left: 0;
-      }
-
-      .glide__slide {
-        border: 2px solid white;
-        border-radius: 10px;
-        background: white;
-        line-height: 400px;
-        margin: 0;
-        text-align: center;
-        display: inline-block;
-        width: 50vw;
-      }
-
-      .rostertext {
-        position: relative;
-        text-shadow: -2px -1px 0px red, 2px 1px 0px black;
-        top: -100px;
-        font-size: 22px;
-        text-align: center;
-        font-weight: bold;
-      }
-      
-      .textsection form {
-        display: block;
-        margin: 0 auto;
-        text-align: center;
-        background: black;
-        margin-left: 5vw;
-        margin-right: 5vw;
-        border: 1px solid white;
-        border-radius: 10px;
-      }
-
-      @media only screen and (max-width: 640px),
-        only screen and (max-device-width: 640px) {
-        .banner a {
-          display: none;
-        }
-        #mobile_menu a {
-          display: block !important;
-        }
-        #mobilemenuhead {
-          margin: 0;
-          display: block !important;
-          text-align: center;
-          text-shadow: 2px 2px 1px red;
-        }
-        .banner table {
-          width: 100%;
-        }
-        #burger {
-          display: block;
-          text-align: center;
-          font-size: 48pt;
-        }
-
-        .textsection p {
-          margin-left: 5vw !important;
-          margin-right: 5vw !important;
-        }
-
-        .textsection td {
-          display: block;
-        }
-        .textsection table {
-          margin: auto;
-        }
-        .textsection tr {
-          text-align: center;
-          margin: auto;
-        }
-
-        .textsection td img {
-          max-width: 80vw !important;
-        }
-
-        .rostertext {
-          top: -200px;
-          font-size: 38px;
-        }
-
-        #roster img {
-          width: 100vw !important;
-          height: 50vh !important;
-        }
-
-        #home .textsection {
-          margin: 0px !important;
-        }
-
-        
-      }
-
-      @media only screen and (min-width: 640px),
-        only screen and (min-device-width: 640px) {
-        #mobile_menu a,
-        #mobilemenuhead {
-          display: none;
-        }
-        #home .textsection {
-          margin-left: 20vw;
-          margin-right: 20vw;
-        }
-      }
-
-      .banner img {
-        height: 20vh;
-      }
-
-      .banner a:hover {
-        color: black;
-        background: white;
-        cursor: pointer;
-      }
-      #burger:hover {
-        cursor: pointer;
-        text-shadow: 2px 2px 0px red;
-      }
-      .main-content {
-        color: white;
-        min-height: 73vh;
-      }
-      .footer {
-        height: 5vh;
-        background: rgb(0, 0, 0);
-        background: linear-gradient(
-          0deg,
-          rgba(0, 0, 0, 1) 5%,
-          rgba(0, 0, 0, 0.8) 50%,
-          rgba(0, 0, 0, 0.3) 90%,
-          rgba(0, 0, 0, 0) 100%
-        );
-        color: white;
-        margin: 0 auto;
-        padding-top: 2vh;
-        text-align: center;
-      }
-
-      .main-content h1 {
-        margin: 0 auto;
-        margin-top: 15px;
-        font-size: 32pt;
-        color: white;
-        text-shadow: 2px 2px 0px red;
-        text-align: center;
-      }
-      .main-content table {
-        margin: 0 auto;
-        margin-top: 15px;
-      }
-      .main-content td {
-        border: 1px groove white;
-        border-radius: 10px;
-        padding: 7vw;
-      }
-      #home {
-        display: block;
-      }
-
-      #roster {
-        display: none;
-      }
-      #synch {
-        display: none;
-      }
-      #news {
-        display: none;
-      }
-      #about {
-        display: none;
-      }
-      #contact {
-        display: none;
-      }
-      #mobile_menu {
-        display: none;
-      }
-
-      .textsection p {
-        padding: 3vh;
-        margin-left: 10vh;
-        margin-right: 10vh;
-        margin-top: 15px;
-        text-align: left;
-        font-size: 14pt;
-        border: 1px groove white;
-        background: black;
-        opacity: 1;
-        border-radius: 10px;
-      }
-
-      .textsection td {
-        border: none;
-        margin: 0;
-        padding: 5px;
-      }
-
-      #news .textsection {
-        margin: 0 auto;
-        display: block;
-        border: 1px solid black;
-        border-radius: 10px;
-        width: 70vw;
-        color: black;
-        font-size: 16px;
-      }
-
-      #news p {
-        background: white;
-        color: black;
-        padding: 0;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 0;
-        text-align: justify;
-        font-size: 16px;
-      }
-
-      #news img {
-        max-width: 69.7vw;
-      }
-
-      .post-wrap {
-        display: block;
-        background: white;
-        border-radius: 10px;
-        color: black;
-      }
-
-      .card-head {
-        font-size: 16px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        background: black;
-        color: white;
-      }
-
-      #roster img {
-        height: 40vh;
-        width: 30vw;
-      }
-
-      .an1 {
-        max-width: 12px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js'></script>
     <script type='module'>
       var glideMulti = new Glide('.multi', {
-        type: 'carousel',
-        autoplay: 2000,
-        focusAt: 'center',
-        perView: 3
-      });
+          type: 'carousel',
+          autoplay: 2000,
+          focusAt: 'center',
+          perView: 3
+        });
 
-      glideMulti.mount();
+        glideMulti.mount();
     </script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
@@ -380,211 +76,7 @@
       }
       anim();
     </script>
-
-    <script>
-      function home() {
-        document.getElementById("roster").style.display = "none";
-        document.getElementById("news").style.display = "none";
-        document.getElementById("about").style.display = "none";
-        document.getElementById("contact").style.display = "none";
-        document.getElementById("synch").style.display = "none";
-        document.getElementById("home").style.display = "block";
-        document.querySelectorAll(".homebutton").forEach(function (e) {
-          e.textContent = "●HOME●";
-          e.style.boxShadow = "0px 0px 10px red";
-        });
-        document.querySelectorAll(".rosterbutton").forEach(function (e) {
-          e.textContent = "ROSTER";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".synchbutton").forEach(function (e) {
-          e.textContent = "SYNCH";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".newsbutton").forEach(function (e) {
-          e.textContent = "NEWS";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".aboutbutton").forEach(function (e) {
-          e.textContent = "ABOUT";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".contactbutton").forEach(function (e) {
-          e.textContent = "CONTACT";
-          e.style.boxShadow = "none";
-        });
-      }
-      function roster() {
-        document.getElementById("home").style.display = "none";
-        document.getElementById("news").style.display = "none";
-        document.getElementById("about").style.display = "none";
-        document.getElementById("contact").style.display = "none";
-        document.getElementById("roster").style.display = "block";
-        document.getElementById("synch").style.display = "none";
-        document.querySelectorAll(".homebutton").forEach(function (e) {
-          e.textContent = "HOME";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".rosterbutton").forEach(function (e) {
-          e.textContent = "●ROSTER●";
-          e.style.boxShadow = "0px 0px 10px red";
-        });
-        document.querySelectorAll(".synchbutton").forEach(function (e) {
-          e.textContent = "SYNCH";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".newsbutton").forEach(function (e) {
-          e.textContent = "NEWS";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".aboutbutton").forEach(function (e) {
-          e.textContent = "ABOUT";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".contactbutton").forEach(function (e) {
-          e.textContent = "CONTACT";
-          e.style.boxShadow = "none";
-        });
-      }
-      function synch() {
-        document.getElementById("roster").style.display = "none";
-        document.getElementById("news").style.display = "none";
-        document.getElementById("about").style.display = "none";
-        document.getElementById("contact").style.display = "none";
-        document.getElementById("synch").style.display = "block";
-        document.getElementById("home").style.display = "none";
-        document.querySelectorAll(".homebutton").forEach(function (e) {
-          e.textContent = "HOME";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".rosterbutton").forEach(function (e) {
-          e.textContent = "ROSTER";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".synchbutton").forEach(function (e) {
-          e.textContent = "●SYNCH●";
-          e.style.boxShadow = "0px 0px 10px red";
-        });
-        document.querySelectorAll(".newsbutton").forEach(function (e) {
-          e.textContent = "NEWS";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".aboutbutton").forEach(function (e) {
-          e.textContent = "ABOUT";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".contactbutton").forEach(function (e) {
-          e.textContent = "CONTACT";
-          e.style.boxShadow = "none";
-        });
-      }
-      function news() {
-        document.getElementById("home").style.display = "none";
-        document.getElementById("roster").style.display = "none";
-        document.getElementById("about").style.display = "none";
-        document.getElementById("contact").style.display = "none";
-        document.getElementById("news").style.display = "block";
-        document.getElementById("synch").style.display = "none";
-        document.querySelectorAll(".homebutton").forEach(function (e) {
-          e.textContent = "HOME";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".rosterbutton").forEach(function (e) {
-          e.textContent = "ROSTER";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".synchbutton").forEach(function (e) {
-          e.textContent = "SYNCH";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".newsbutton").forEach(function (e) {
-          e.textContent = "●NEWS●";
-          e.style.boxShadow = "0px 0px 10px red";
-        });
-        document.querySelectorAll(".aboutbutton").forEach(function (e) {
-          e.textContent = "ABOUT";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".contactbutton").forEach(function (e) {
-          e.textContent = "CONTACT";
-          e.style.boxShadow = "none";
-        });
-      }
-      function about() {
-        document.getElementById("home").style.display = "none";
-        document.getElementById("roster").style.display = "none";
-        document.getElementById("news").style.display = "none";
-        document.getElementById("contact").style.display = "none";
-        document.getElementById("about").style.display = "block";
-        document.getElementById("synch").style.display = "none";
-        document.querySelectorAll(".homebutton").forEach(function (e) {
-          e.textContent = "HOME";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".rosterbutton").forEach(function (e) {
-          e.textContent = "ROSTER";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".synchbutton").forEach(function (e) {
-          e.textContent = "SYNCH";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".newsbutton").forEach(function (e) {
-          e.textContent = "NEWS";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".aboutbutton").forEach(function (e) {
-          e.textContent = "●ABOUT●";
-          e.style.boxShadow = "0px 0px 10px red";
-        });
-        document.querySelectorAll(".contactbutton").forEach(function (e) {
-          e.textContent = "CONTACT";
-          e.style.boxShadow = "none";
-        });
-      }
-      function contact() {
-        document.getElementById("home").style.display = "none";
-        document.getElementById("roster").style.display = "none";
-        document.getElementById("news").style.display = "none";
-        document.getElementById("about").style.display = "none";
-        document.getElementById("contact").style.display = "block";
-        document.getElementById("synch").style.display = "none";
-        document.querySelectorAll(".homebutton").forEach(function (e) {
-          e.textContent = "HOME";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".rosterbutton").forEach(function (e) {
-          e.textContent = "ROSTER";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".synchbutton").forEach(function (e) {
-          e.textContent = "SYNCH";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".newsbutton").forEach(function (e) {
-          e.textContent = "NEWS";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".aboutbutton").forEach(function (e) {
-          e.textContent = "ABOUT";
-          e.style.boxShadow = "none";
-        });
-        document.querySelectorAll(".contactbutton").forEach(function (e) {
-          e.textContent = "●CONTACT●";
-          e.style.boxShadow = "0px 0px 10px red";
-        });
-      }
-      var mobile_open = false;
-      function mobile_menu() {
-        if (mobile_open) {
-          document.getElementById("mobile_menu").style.display = "none";
-          mobile_open = false;
-        } else {
-          document.getElementById("mobile_menu").style.display = "block";
-          mobile_open = true;
-        }
-      }
-    </script>
+    <script src="menu_tabs.js"></script>
   </head>
   <body>
     <div class="banner">
@@ -639,6 +131,10 @@
       </div>
     </div>
     <div class="main-content">
+
+      <!-- ROSTER -->
+      <!-- ROSTER -->
+
       <div id="roster">
         <div class="textsection">
           <h1>ROSTER</h1>
@@ -700,6 +196,10 @@
           </table>
         </div>
       </div>
+
+      <!-- HOME -->
+      <!-- HOME -->
+
       <div id="home">
         <h1>HOME</h1>
         <div class="textsection">
@@ -723,6 +223,10 @@
           </div>
         </div>
       </div>
+
+      <!-- SYNCH -->
+      <!-- SYNCH -->
+
       <div id="synch">
         <h1>SYNCH</h1>
         <div class="textsection">
@@ -739,6 +243,10 @@
           </p>
         </div>
       </div>
+
+      <!-- NEWS -->
+      <!-- NEWS -->
+
       <div id="news">
         <h1>NEWS</h1>
         <div class="textsection">
@@ -756,6 +264,10 @@
 
         </div>
       </div>
+
+      <!-- ABOUT -->
+      <!-- ABOUT -->
+
       <div id="about">
         <h1>ABOUT</h1>
         <div class="textsection">
@@ -781,6 +293,10 @@
           </p>
         </div>
       </div>
+
+      <!-- CONTACT -->
+      <!-- CONTACT -->
+
       <div id="contact">
         <h1>CONTACT</h1>
         <div class="textsection">
@@ -798,7 +314,6 @@
             <a href='https://twitter.com/tmpkinsfarmusic'><img style='width: 5vw;' src='Twitter social icons - rounded square - blue.png'></a>
           </p>
 
-          
           <form action="https://getform.io/f/68506130-5f38-4dad-a55f-2eaccea57292" method="POST">
             <br><span style="font-size: 25px;">OR, SEND US A MESSAGE DIRECTLY:</span><br><br>
             <input type="text" name="name" placeholder="Your name..."><br>
@@ -807,13 +322,17 @@
             <button type="submit">Send</button><br><br>
           </form>
 
-          
         </div>
       </div>
     </div>
+
+    <!-- FOOTER -->
     <div class="footer">
       © 2021 Tompkins Farm Music, LLC
     </div>
+
+    <!-- BACKGROUND CANVAS -->
     <canvas id="c"></canvas>
+
   </body>
 </html>
