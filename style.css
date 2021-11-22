@@ -26,6 +26,16 @@ body,
   z-index: -1;
 }
 
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
 /* banner & menu */
 /* banner & menu */
 
@@ -98,9 +108,9 @@ body,
 .main-content h1 {
   margin: 0 auto;
   margin-top: 15px;
-  font-size: 32pt;
+  font-size: 42pt;
   color: white;
-  text-shadow: 2px 2px 0px red;
+  text-shadow: 2px 2px 0px red, 0px 0px 15px white, 0px 0px 5px red;
   text-align: center;
 }
 
@@ -153,15 +163,39 @@ body,
   left: 0;
 }
 
+.glide__slides {
+  height: 60vh;
+}
+
 .glide__slide {
   border: 2px solid white;
   border-radius: 10px;
-  background: white;
-  line-height: 400px;
+  background: black;
   margin: 0;
   text-align: center;
   display: inline-block;
   width: 50vw;
+}
+
+.slidetext {
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-top: 20px;
+  position: relative;
+  top: 0;
+  color: white;
+  text-shadow: 0px 0px 10px red;
+  font-size: 30px;
+  width: 89%;
+  z-index: 1;
+}
+
+.slidegif {
+  position: relative;
+  top: -40px;
+  margin: 0 auto;
+  width: 30vw;
+  height: 40vh;
 }
 
 /* roster */
@@ -196,6 +230,21 @@ body,
 #roster img {
   height: 40vh;
   width: 30vw;
+}
+
+.overlay {
+  opacity: 1;
+  position: relative;
+  top: -40.5vh;
+  border-radius: 10px;
+  background: red;
+  height: 20vh;
+  z-index: 1;
+}
+
+.overlay:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
 
 /* contact */
@@ -259,6 +308,14 @@ body,
   color: white;
 }
 
+/* synch */
+/* synch */
+
+.synchimg {
+  width: 28vw;
+  height: 25vh;
+}
+
 /* mobile view */
 /* mobile view */
 
@@ -318,6 +375,15 @@ body,
 
   #home .textsection {
     margin: 0px !important;
+  }
+
+  .synchimg {
+    width: 35vw;
+    height: 10vh;
+  }
+
+  .slidegif {
+    height: 20vh !important;
   }
 
 }
