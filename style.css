@@ -158,7 +158,7 @@ body,
 .multi {
   position: absolute;
   overflow: hidden;
-  width: 99vw;
+  width: 100%;
   margin: 0;
   left: 0;
 }
@@ -175,6 +175,11 @@ body,
   text-align: center;
   display: inline-block;
   width: 50vw;
+  height: 30vw;
+}
+
+.glide__slide:hover {
+    cursor: grab;
 }
 
 .slidetext {
@@ -330,6 +335,15 @@ body,
 
 @media only screen and (max-width: 640px),
   only screen and (max-device-width: 640px) {
+
+  #contact a img {
+    width: 20vw !important;
+  }
+
+  .glide__slide {
+    width: 70vw !important;
+    height: 60vh !important;
+  }
 
   .synchimg {
     width: 80vw !important;
