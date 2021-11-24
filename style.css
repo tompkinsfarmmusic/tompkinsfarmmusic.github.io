@@ -50,7 +50,7 @@ body,
   width: 100%;
   height: 20vh;
   box-shadow: 0px -10px 20px white;
-  z-index: 1;
+  z-index: 2;
 }
 
 .banner a {
@@ -185,7 +185,7 @@ body,
   top: 0;
   color: white;
   text-shadow: 0px 0px 10px red;
-  font-size: 30px;
+  font-size: 4vh;
   width: 89%;
   z-index: 1;
 }
@@ -202,9 +202,8 @@ body,
 /* roster */
 
 .rostertext {
-  position: relative;
+  position: absolute;
   text-shadow: -2px -1px 0px red, 2px 1px 0px black;
-  top: -100px;
   font-size: 22px;
   text-align: center;
   font-weight: bold;
@@ -227,18 +226,28 @@ body,
   padding: 5px;
 }
 
-#roster img {
-  height: 40vh;
+#roster td {
+  position: relative;
+  display: inline-block;
+  height: 25vw;
   width: 30vw;
+  margin: 1vw;
+}
+
+#roster img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .overlay {
-  opacity: 1;
-  position: relative;
-  top: -40.5vh;
-  border-radius: 10px;
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
   background: red;
-  height: 20vh;
+  border-radius: 10px;
   z-index: 1;
 }
 
@@ -321,6 +330,11 @@ body,
 
 @media only screen and (max-width: 640px),
   only screen and (max-device-width: 640px) {
+
+  .synchimg {
+    width: 80vw !important;
+    height: auto !important;
+  }
   
   .banner a {
     display: none;
@@ -348,29 +362,10 @@ body,
     margin-right: 5vw !important;
   }
 
-  .textsection td {
+  #roster td {
     display: block;
-  }
-  .textsection table {
-    margin: auto;
-  }
-  .textsection tr {
-    text-align: center;
-    margin: auto;
-  }
-
-  .textsection td img {
-    max-width: 80vw !important;
-  }
-
-  .rostertext {
-    top: -200px;
-    font-size: 38px;
-  }
-
-  #roster img {
-    width: 100vw !important;
-    height: 50vh !important;
+    width: 60vw !important;
+    height: 60vw !important;
   }
 
   #home .textsection {
