@@ -208,6 +208,8 @@ body,
 
 .rostertext {
   position: absolute;
+  width: 100%;
+  text-align: center;
   text-shadow: -2px -1px 0px red, 2px 1px 0px black;
   font-size: 22px;
   font-weight: bold;
@@ -257,7 +259,7 @@ body,
 
 .overlay:hover {
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 /* contact */
@@ -286,7 +288,7 @@ body,
   display: block;
   border: 1px solid black;
   border-radius: 10px;
-  width: 70vw;
+  width: 90vw;
   color: black;
   font-size: 16px;
 }
@@ -377,7 +379,7 @@ body,
 
   #roster td {
     display: block;
-    width: 60vw !important;
+    width: 80vw !important;
     height: 60vw !important;
   }
 
