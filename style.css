@@ -173,7 +173,7 @@ body,
   background: black;
   margin: 0;
   text-align: center;
-  display: inline-block;
+  display: inline-grid;
   width: 50vw;
   height: 30vw;
 }
@@ -210,7 +210,6 @@ body,
   position: absolute;
   text-shadow: -2px -1px 0px red, 2px 1px 0px black;
   font-size: 22px;
-  text-align: center;
   font-weight: bold;
 }
 
