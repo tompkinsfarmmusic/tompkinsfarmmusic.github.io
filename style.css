@@ -97,6 +97,10 @@ body,
   height: 20vh;
 }
 
+.banner img:hover {
+  cursor: pointer;
+}
+
 /* generic content */
 /* generic content */
 
