@@ -19,6 +19,15 @@ body,
   left: 0;
   width: 100%;
   height: 100%;
+  background: #380707;
+}
+
+::-moz-selection { /* Code for Firefox */
+  background: red;
+}
+
+::selection {
+  background: red;
 }
 
 #c {
@@ -239,9 +248,9 @@ body,
 #roster td {
   position: relative;
   display: inline-block;
-  height: 25vw;
-  width: 30vw;
-  margin: 1vw;
+  height: 20vw;
+  width: 28vw;
+  margin: 0.5vw;
 }
 
 #roster img {
@@ -435,12 +444,3 @@ body,
   padding-top: 2vh;
   text-align: center;
 }
-
-
-/*
-▒▒▄▀▀▀▀▀▄▒▒▒▒▒▄▄▄▄▄▒▒▒
-▒▐░▄░░░▄░▌▒▒▄█▄█▄█▄█▄▒
-▒▐░▀▀░▀▀░▌▒▒▒▒▒░░░▒▒▒▒
-▒▒▀▄░═░▄▀▒▒▒▒▒▒░░░▒▒▒▒
-▒▒▐░▀▄▀░▌▒▒▒▒▒▒░░░▒▒▒▒
-*/
