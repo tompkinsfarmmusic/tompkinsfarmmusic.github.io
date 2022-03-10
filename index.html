@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -8,23 +10,38 @@
 
     <link rel="icon" href="https://i.ibb.co/gzBwFdf/TFM1-black-icon-250.jpg">
     <link rel="stylesheet" href="style.css">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js'></script>
-    <script type='module'>
-      var glideMulti = new Glide('.multi', {
-          type: 'carousel',
-          autoplay: 3000,
-          focusAt: 'center',
-          perView: 2
-        });
+    <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.0.4/dist/css/glide.core.css">
+    <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.0.4/dist/css/glide.theme.css">
+    <script src='https://unpkg.com/@glidejs/glide@3.0.4/dist/glide.js'></script>
 
-      glideMulti.mount();
+    <script type='module'>
+
+      var glide = new Glide('.multi', {
+        type: 'carousel',
+        autoplay: 2500,
+        focusAt: 'center',
+        perView: 1,
+        gap: 0,
+      });
+
+      glide.mount();
+
+      if (document.readyState !== 'complete') {
+        document.addEventListener('readystatechange', () => {
+          if (document.readyState === 'complete') {
+            glide.refresh();
+          }
+        });
+      }
+
     </script>
-    <script
+    
+    <!-- <script
       src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
       integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    ></script>
+    ></script> -->
     <!-- <script type="module">
       var canvas = document.querySelector("#c");
       var renderer = new THREE.WebGLRenderer({ antialias: true, canvas: c });
@@ -76,19 +93,22 @@
       }
       anim();
     </script> -->
+    
     <script src="menu_tabs.js"></script>
+  
   </head>
+  
   <body>
     
     <div class="banner">
       <table>
         <tr>
           <td>
-            <img class='noselect' onclick="home()"
+            <img class='noselect' onclick="home()" style="height: 15vh;"
               src="TFM3 transparent white 250.png"
             />
           </td>
-          <td><span id="burger" class='noselect' onclick="mobile_menu()">&equiv;</span></td>
+          
           <td><a class="homebutton noselect" onclick="home()">●HOME●</a></td>
           <td>
             <a class="aboutbutton noselect" onclick="about()">ABOUT</a>
@@ -104,6 +124,7 @@
           <td>
             <a class="contactbutton noselect" onclick="contact()">CONTACT</a>
           </td>
+          <td><span id="burger" class='noselect' onclick="mobile_menu()">&equiv;</span></td>
         </tr>
       </table>
       <div id="mobile_menu">
@@ -131,7 +152,7 @@
         </table>
       </div>
     </div>
-    
+
     <div class="main-content">
 
       <!-- ROSTER -->
@@ -310,27 +331,78 @@
       <!-- HOME -->
 
       <div id="home">
-        <h1 class='noselect'>HOME</h1>
-        <div class="textsection">
-          <div class="glide multi">
-            <div class="glide__track" data-glide-el="track">
-              <ul class="glide__slides">
-                <li class="glide__slide">
-                  <div class='slidetext noselect'> Building strong, personal relationships with artists </div>
-                  <img class='slidegif noselect' src='https://thumbs.gfycat.com/UnripeWickedHornet-size_restricted.gif'>
-                </li>
-                <li class="glide__slide">
-                  <div class='slidetext noselect'> Placement in film, television, games, and commercials </div>
-                  <img class='slidegif noselect' src='https://thumbs.gfycat.com/CriminalBlaringAmericanbulldog-size_restricted.gif'>
-                </li>
-                <li class="glide__slide">
-                  <div class='slidetext noselect'> 30+ years of industry experience and legal expertise </div>
-                  <img class='slidegif noselect' src='https://i.gifer.com/Ybin.gif'>
-                </li>
-              </ul>
-            </div>
+        <div id="logowrap"><img class='noselect' id="homelogo" src="TFM3 transparent white 500.png"></div>
+        <div class="glide multi">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide" id="slide1">
+                <!-- <div class='slidetext noselect'> Building strong, personal relationships with artists </div>
+                <img class='slidegif noselect' src='https://thumbs.gfycat.com/UnripeWickedHornet-size_restricted.gif'> -->
+              </li>
+              <li class="glide__slide" id="slide2">
+                <!-- <div class='slidetext noselect'> Placement in film, television, games, and commercials </div>
+                <img class='slidegif noselect' src='https://thumbs.gfycat.com/CriminalBlaringAmericanbulldog-size_restricted.gif'> -->
+              </li>
+              <li class="glide__slide" id="slide3">
+                <!-- <div class='slidetext noselect'> 30+ years of industry experience and legal expertise </div>
+                <img class='slidegif noselect' src='https://i.gifer.com/Ybin.gif'> -->
+              </li>
+              <li class="glide__slide" id="slide4"></li>
+              <li class="glide__slide" id="slide5"></li>
+              <li class="glide__slide" id="slide6"></li>
+              <li class="glide__slide" id="slide7"></li>
+              <li class="glide__slide" id="slide8"></li>
+            </ul>
+          </div>
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+            <button class="glide__bullet" data-glide-dir="=3"></button>
+            <button class="glide__bullet" data-glide-dir="=4"></button>
+            <button class="glide__bullet" data-glide-dir="=5"></button>
+            <button class="glide__bullet" data-glide-dir="=6"></button>
+            <button class="glide__bullet" data-glide-dir="=7"></button>
           </div>
         </div>
+
+        <div>
+          <div id="collectionrow">
+            <img src="https://portal.themlc.com/assets/mlc_logo.e4ac39dd.svg">
+            <img src="file:///C:/Users/Karla's/Downloads/logo-desktop.webp">
+            <img src="cmrra.png">
+            <img src="impel.png">
+            <img src="https://upload.wikimedia.org/wikipedia/en/d/de/PRS_for_Music_logo.svg">
+            <img src="https://www.gloin.es/images/customers/logo-latinautor-grey.png">
+            <img src="https://www.sacem.fr/img/common/new/logo-footer.png">
+          </div>
+          <div class="homehead"><strong>We deal with collection agencies, so you don't have to!</strong></div>
+          <hr>
+          <div id="collectionblurb" class="blurb">Registering your works with collection agencies can be a huge pain, especially when you want to receive royalties from other countries.  It's convoluted and time-consuming, and you should be able to use that time on what really matters: your art.
+            <br><br>
+            <strong>Let us handle it for you</strong> — we  maintain a catalog of thousands of songs with several mechanical and performance agencies all over the world.
+            <br><br>
+            All you'll need to think about is getting a check in the mail!
+          </div>
+          <div class="blackonwhite">
+            <div id="streamingrow">
+              <img src="https://vectorlogoseek.com/wp-content/uploads/2019/09/tidal-vector-logo.png">
+              <img src="https://cdn-icons-png.flaticon.com/512/49/49383.png">
+              <img src="https://assets.stickpng.com/images/602173aa0ad3230004b93c1b.png">
+              <img src="https://www.kindpng.com/picc/m/276-2769256_amazon-music-logo-vector-png-download-parallel-transparent.png">
+              <img src="https://www.kindpng.com/picc/m/108-1084903_spotify-logo-black-png-black-spotify-logo-png.png">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/YouTube_dark_icon_%282017%29.svg/2560px-YouTube_dark_icon_%282017%29.svg.png">
+            </div>
+            <div class="homehead"><strong>Collect royalties from major streaming services without lifting a finger!</strong></div>
+            <div id="streamingblurb" class="blurb">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis facilisis risus, sodales condimentum odio. Nullam non nisi vehicula, maximus lorem sit amet, dignissim sapien. Morbi tristique ante quam, quis molestie diam scelerisque at. Nunc et semper magna. In at orci et sem efficitur semper in quis ex. Nunc vel ultrices purus. Morbi faucibus turpis et faucibus sagittis. Curabitur nisl augue, cursus id sollicitudin eu, tincidunt vitae sapien. Sed nec odio justo. 
+            <br><br>
+            All you'll need to think about is getting a check in the mail!
+            </div>
+            <!-- <div style="margin: 5%; font-size: 5vh;">Building strong, personal relationships with artists</div> -->
+          </div>
+          </div>
+          
       </div>
 
       <!-- SYNCH -->

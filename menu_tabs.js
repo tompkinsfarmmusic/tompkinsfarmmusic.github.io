@@ -11,7 +11,7 @@ function home() {
     document.getElementById("home").style.display = "block";
     document.querySelectorAll(".homebutton").forEach(function (e) {
       e.textContent = "●HOME●";
-      e.style.boxShadow = "0px 0px 10px red";
+      e.style.boxShadow = "0px 0px 10px #B27A77";
     });
     document.querySelectorAll(".rosterbutton").forEach(function (e) {
       e.textContent = "ROSTER";
@@ -50,7 +50,7 @@ function roster() {
   });
   document.querySelectorAll(".rosterbutton").forEach(function (e) {
     e.textContent = "●ROSTER●";
-    e.style.boxShadow = "0px 0px 10px red";
+    e.style.boxShadow = "0px 0px 10px #B27A77";
   });
   document.querySelectorAll(".synchbutton").forEach(function (e) {
     e.textContent = "SYNCH";
@@ -89,7 +89,7 @@ function synch() {
   });
   document.querySelectorAll(".synchbutton").forEach(function (e) {
     e.textContent = "●SYNCH●";
-    e.style.boxShadow = "0px 0px 10px red";
+    e.style.boxShadow = "0px 0px 10px #B27A77";
   });
   document.querySelectorAll(".newsbutton").forEach(function (e) {
     e.textContent = "NEWS";
@@ -128,7 +128,7 @@ function news() {
   });
   document.querySelectorAll(".newsbutton").forEach(function (e) {
     e.textContent = "●NEWS●";
-    e.style.boxShadow = "0px 0px 10px red";
+    e.style.boxShadow = "0px 0px 10px #B27A77";
   });
   document.querySelectorAll(".aboutbutton").forEach(function (e) {
     e.textContent = "ABOUT";
@@ -167,7 +167,7 @@ function about() {
   });
   document.querySelectorAll(".aboutbutton").forEach(function (e) {
     e.textContent = "●ABOUT●";
-    e.style.boxShadow = "0px 0px 10px red";
+    e.style.boxShadow = "0px 0px 10px #B27A77";
   });
   document.querySelectorAll(".contactbutton").forEach(function (e) {
     e.textContent = "CONTACT";
@@ -206,7 +206,7 @@ function contact() {
   });
   document.querySelectorAll(".contactbutton").forEach(function (e) {
     e.textContent = "●CONTACT●";
-    e.style.boxShadow = "0px 0px 10px red";
+    e.style.boxShadow = "0px 0px 10px #B27A77";
   });
 }
 
