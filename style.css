@@ -11,8 +11,7 @@
 /* background */
 
 html,
-body,
-#c {
+body {
   margin: 0;
   display: block;
   top: 0;
@@ -24,16 +23,11 @@ body,
 }
 
 ::-moz-selection { /* Code for Firefox */
-  background: #B27A77;
+  background: #ad6580;
 }
 
 ::selection {
-  background: #B27A77;
-}
-
-#c {
-  position: fixed;
-  z-index: -1;
+  background: #ad6580;
 }
 
 .noselect {
@@ -200,7 +194,8 @@ body,
 
 .glide__slide {
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  /* background-size: 100% 100%; */
   overflow: hidden;
 }
 
@@ -240,23 +235,6 @@ body,
   cursor: grab;
 }
 
-/* .slidetext {
-  position: relative;
-  top: 20%;
-  color: #EADEDA;
-  text-shadow: 0px 0px 10px #823329;
-  font-size: 6vh;
-  z-index: 1;
-} */
-
-/* .slidegif {
-  position: relative;
-  top: -40px;
-  margin: 0 auto;
-  width: 33vw;
-  height: 44vh;
-} */
-
 /* home stuff */
 /* home stuff */
 
@@ -274,21 +252,14 @@ body,
 
 #homelogo {
   min-height: 50vh;
+  max-height: 60vh;
   width: auto;
   max-width: 100vw;
   -webkit-filter: drop-shadow(0px 0px 1px black) drop-shadow(0px 0px 5px white) drop-shadow(2px 2px 1px black) drop-shadow(-2px -2px 1px black);
   filter: drop-shadow(0px 0px 1px black) drop-shadow(0px 0px 5px white) drop-shadow(2px 2px 1px black) drop-shadow(-2px -2px 1px black);
 }
 
-.homehead {
-  font-size: 7vw;
-  margin-top: 5vh;
-  margin-bottom: 2vh;
-  padding-left: 9vw;
-  padding-right: 9vw;
-}
-
-#collectionrow {
+.logorow {
   -webkit-box-align:center;
   -ms-flex-align:center;
   align-items:center;
@@ -299,17 +270,59 @@ body,
   justify-content: space-around;
   max-width:90rem;
   text-align:center;
-  padding: none;
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
 
-#collectionrow img {
+.logorow img {
   margin-top: 5%;
   max-height: 10vh;
 }
 
+.split {
+  display: grid;
+  grid-template-columns: 60vw 35vw;
+}
+
+.split-reverse {
+  display: grid;
+  grid-template-columns: 45vw 50vw;
+}
+
+#collectionsplit {
+  background: linear-gradient(to bottom, #B27A77ee, #B27A7700), url(light-red-blurred-background-vector.jpg);
+}
+
+#streamingsplit {
+  background: linear-gradient(to bottom, #ffffffff, #B27A7700), url(light-red-blurred-background-vector.jpg);
+}
+
+.bgtocolor {
+  background: linear-gradient(to bottom, #B27A7700, #B27A77ff), url(light-red-blurred-background-vector.jpg);
+}
+
+.splitimage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.split .left {
+  margin-left: 10vw;
+}
+
+.split-reverse .left {
+  margin-left: 10vw;
+}
+
+.homehead {
+  font-size: 3vw;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+  padding-right: 5vw;
+}
+
 hr {
-  margin-left: 7vw;
-  margin-right: 7vw;
   height: 0.9vh;
   background: #E9C4C2;
   border: none;
@@ -318,38 +331,10 @@ hr {
 .blurb {
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  padding-left: 10vw;
-  padding-right: 30vw;
+  padding-right: 5vw;
   padding-bottom: 5vh;
   padding-top: 5vh;
-  font-size: 3vw;
-}
-
-#collectionblurb {
-  background: linear-gradient(to bottom, #B27A77ee, #B27A7700), url(light-red-blurred-background-vector.jpg);
-}
-
-#streamingrow {
-  -webkit-box-align:center;
-  -ms-flex-align:center;
-  align-items:center;
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  max-width:90rem;
-  text-align:center;
-  padding: none;
-}
-
-#streamingrow img {
-  margin-top: 5%;
-  max-height: 10vh;
-}
-
-#streamingblurb {
-  background: linear-gradient(to bottom, #ffffffff, #B27A7700), url(light-red-blurred-background-vector.jpg);
+  font-size: 1.75vw;
 }
 
 .blackonwhite {
@@ -493,11 +478,34 @@ hr {
   only screen and (max-device-width: 640px) {
 
   .homehead {
-    font-size: 10vw;
+    font-size: 8.5vw;
   }
 
   #homelogo {
     max-height: 40vh;
+  }
+
+  .logorow img {
+    margin-top: 10%;
+    max-height: 7vh;
+  }
+
+  .split {
+    grid-template-columns: 97vw;
+  }
+  
+  .split-reverse {
+    grid-template-columns: 97vw;
+  }
+
+  .split-reverse .left {
+    order: 2;
+    margin-left: 0;
+  }
+
+  .split-reverse .right {
+    order: 1;
+    margin-left: 10vw;
   }
 
   .blurb {
@@ -592,7 +600,7 @@ hr {
 
 .footer {
   height: 5vh;
-  background: linear-gradient(to bottom, #82332900, #823329dd, black), url(light-red-blurred-background-vector.jpg);
+  background: linear-gradient(to bottom, #B27A77ff, #823329), url(light-red-blurred-background-vector.jpg);
   color: white;
   margin: 0 auto;
   padding-top: 2vh;
