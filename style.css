@@ -282,11 +282,15 @@ body {
 .split {
   display: grid;
   grid-template-columns: 60vw 35vw;
+  margin-top: 5vh;
+  padding-bottom: 5vh;
 }
 
 .split-reverse {
   display: grid;
   grid-template-columns: 45vw 50vw;
+  margin-top: 5vh;
+  padding-bottom: 5vh;
 }
 
 #collectionsplit {
