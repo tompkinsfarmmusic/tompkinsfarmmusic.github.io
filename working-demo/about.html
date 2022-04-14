@@ -1,0 +1,76 @@
+<head>
+    <link rel='stylesheet' href='styl.css'>
+</head>
+
+<body>
+    
+    <nav><span id='equiv'>&equiv;</span></nav>
+    <div id='menu'>
+        <li><span><a href='./demo.html'>HOME</a></span></li>
+        <li><span>ABOUT</span></li>
+    </div>
+    
+    <div class='abt'>
+        <p>
+            Welcome to the Farm!
+        </p>
+        What is Tompkins Farm Music?
+        <p>
+            Tompkins Farm Music is a boutique music publisher located in Westchester 
+            County, NY. Established in 2017, the Farm focuses on the global 
+            administration of copyrights. We develop meaningful relationships with 
+            performance and mechanical societies, seek out synchronization 
+            opportunities, and administer production music.
+            <br><br>
+            In a fast-paced world of constant technological change, the Farm is a 
+            throwback to the older days of music publishers. Here, our people 
+            answer phones, develop meaningful relationships with writers and have 
+            a deep knowledge of the music in our catalog. The Farm is familiar 
+            with the international landscape, popular music in different countries, 
+            the major players in the industry, and the sync and advertising landscape. 
+            <br><br>
+            We’re open to songwriters of all shapes and sizes, all styles and time 
+            periods. Our catalog is diverse, spanning multiple genres across several 
+            decades, and dating back to the 1950s. The catalog’s earliest 
+            compositions were recorded by iconic easy listening artists, such as 
+            Perry Como and the Ray Charles Singers. Newer additions include more 
+            contemporary styles such as hip hop, EDM, and indie rock.
+        </p>
+        Our Team
+        <p>
+            Jeffrey Aber
+            <br>
+            Matthew Aber
+            <br>
+            Zachary Aber
+            <br>
+            Penny Aber (CEO)
+        </p>
+        Trivia
+        <p>
+            The Farm is located in the neighborhood which was originally part of 
+            the Noah Tompkins Farm in the Village of Mamaroneck, NY. Noah Tompkins 
+            was a member of one of the earliest families to settle in Westchester 
+            County, NY, and his farm dates back to 1644. Some folks in our 
+            neighborhood believe that our office is located in the original Noah
+            Tompkins farm house.
+        </p>
+    </div>
+    
+    <script>
+        var menu = document.getElementById('menu');
+        document.getElementById('equiv').addEventListener('click',
+        function(e) {
+            if(menu.classList.contains('openmenu')) {
+                menu.classList.remove('openmenu');
+                menu.classList.add('closemenu');
+            } else if(menu.classList.contains('closemenu')) {
+                menu.classList.remove('closemenu');
+                menu.classList.add('openmenu');
+            } else {
+                menu.classList.add('openmenu');
+            }
+        });
+    </script>
+
+</body>
