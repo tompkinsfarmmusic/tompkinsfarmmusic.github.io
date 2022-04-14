@@ -1,12 +1,12 @@
 <head>
-    <link rel='stylesheet' href='styl.css'>
+    <link rel='stylesheet' href='style.css'>
 </head>
 
 <body>
     
     <nav><span id='equiv'>&equiv;</span></nav>
     <div id='menu'>
-        <li><span><a href='./demo.html'>HOME</a></span></li>
+        <li><span><a href='./home.html'>HOME</a></span></li>
         <li><span>ABOUT</span></li>
     </div>
     
@@ -57,20 +57,6 @@
         </p>
     </div>
     
-    <script>
-        var menu = document.getElementById('menu');
-        document.getElementById('equiv').addEventListener('click',
-        function(e) {
-            if(menu.classList.contains('openmenu')) {
-                menu.classList.remove('openmenu');
-                menu.classList.add('closemenu');
-            } else if(menu.classList.contains('closemenu')) {
-                menu.classList.remove('closemenu');
-                menu.classList.add('openmenu');
-            } else {
-                menu.classList.add('openmenu');
-            }
-        });
-    </script>
+    <script src='./menu.js'></script>
 
 </body>

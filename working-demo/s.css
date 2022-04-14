@@ -1,0 +1,83 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    display: flex;
+}
+
+.fullscreen {
+    height: 100vh;
+}
+
+nav {
+    background: black;
+    color: white;
+    position: fixed;
+    height: 100vh;
+    width: 20vw;
+}
+
+nav ul {
+    padding-left: 10px;
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+nav ul li ul {
+    padding-left: 30px;
+}
+
+li {
+    font-size: 16pt;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: all 1s ease-in-out;
+}
+
+.active {
+    color: aqua;
+}
+
+#content {
+    position: absolute;
+    left: 20vw;
+    width: 79vw;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 50px;
+}
+
+#jumbo {
+    background: url(./img/TFM4\ transparent\ black\ 500.png) center top no-repeat;
+    
+    font-size: xx-large;
+}
+
+#tagline {
+    width: 95%;
+    position: absolute;
+    text-align: center;
+    top: 70vh;
+}
+
+h1 {
+    font-size: 40pt;
+}
+
+h2 {
+    font-size: 26pt;
+}
+
+p {
+    font-size: 14pt;
+}
