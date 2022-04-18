@@ -7,6 +7,10 @@ body {
     display: flex;
 }
 
+.noselect {
+    user-select: none;
+}
+
 .fullscreen {
     height: 100vh;
 }
@@ -33,7 +37,7 @@ nav ul li ul {
 }
 
 li {
-    font-size: 16pt;
+    font-size: 14pt;
 }
 
 nav a {
@@ -48,36 +52,109 @@ nav a {
 
 #content {
     position: absolute;
-    left: 20vw;
-    width: 79vw;
+    left: 25vw;
+    width: 70vw;
     overflow-x: hidden;
-}
-
-section {
-    padding: 50px;
 }
 
 #jumbo {
     background: url(./img/TFM4\ transparent\ black\ 500.png) center top no-repeat;
-    
     font-size: xx-large;
 }
 
 #tagline {
-    width: 95%;
+    width: 100%;
     position: absolute;
     text-align: center;
     top: 70vh;
 }
 
 h1 {
-    font-size: 40pt;
+    font-size: 48pt;
+    text-align: center;
 }
 
 h2 {
-    font-size: 26pt;
+    font-size: 30pt;
 }
 
 p {
-    font-size: 14pt;
+    font-size: 16pt;
+    width: 90%;
+}
+
+.imgsplit div {
+    width: 50%;
+}
+
+.imgsplit {
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.rightimg {
+    flex-direction: row;
+}
+
+.leftimg {
+    flex-direction: row-reverse;
+}
+
+.leftimg .imgsplit--text,
+.rightimg .imgsplit--img {
+    margin-left: 10px;
+}
+
+.leftimg .imgsplit--img,
+.rightimg .imgsplit--text {
+    margin-right: 10px;
+}
+
+.imgsplit--img {
+    background: url('https://espnpressroom.com/us/files/2012/07/RS694805_20190920_DSC_8721.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.rostertext {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    text-shadow: -2px -1px 0px #823329, 2px 1px 0px black;
+    font-size: 22px;
+    font-weight: bold;
+}
+  
+#roster table {
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+#roster td {
+    position: relative;
+    display: inline-block;
+    height: 15vw;
+    width: 21vw;
+    margin: 0.5vw;
+}
+  
+#roster img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.overlay {
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #823329;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.overlay:hover {
+    cursor: pointer;
+    opacity: 0.3;
 }
