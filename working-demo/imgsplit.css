@@ -1,0 +1,51 @@
+.imgsplit {
+    display: flex;
+    padding-bottom: 50px;
+}
+
+.imgsplit div {
+    width: 50%;
+    min-height: 200px;
+}
+
+.rightimg {
+    flex-flow: row;
+}
+
+.leftimg {
+    flex-flow: row-reverse;
+}
+
+.leftimg .imgsplit--text,
+.rightimg .imgsplit--img {
+    margin-left: 10px;
+}
+
+.leftimg .imgsplit--img,
+.rightimg .imgsplit--text {
+    margin-right: 10px;
+}
+
+.imgsplit--img {
+    background: url('https://espnpressroom.com/us/files/2012/07/RS694805_20190920_DSC_8721.jpg') no-repeat center;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 640px),
+  only screen and (max-device-width: 640px) {
+    .imgsplit div {
+        width: 100%;
+    }
+
+    .rightimg,
+    .leftimg {
+        flex-flow: column;
+    }
+
+    .leftimg .imgsplit--img,
+    .leftimg .imgsplit--text,
+    .rightimg .imgsplit--img,
+    .rightimg .imgsplit--text {
+        margin: 0;
+    }
+}
