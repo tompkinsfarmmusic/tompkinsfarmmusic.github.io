@@ -1,0 +1,29 @@
+#contactcontainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 25px;
+    align-items:center;
+}
+
+#socials {
+    display: flex;
+    flex-flow: column;
+}
+
+#socials img {
+    width: 90px;
+}
+
+#formsection {
+    text-align: center;
+}
+
+@media only screen and (max-width: 640px),
+  only screen and (max-device-width: 640px) {
+    #socials {
+        flex-flow: row;
+        gap: 15px;
+        padding-top: 15px;
+    }
+}

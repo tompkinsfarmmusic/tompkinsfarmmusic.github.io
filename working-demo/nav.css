@@ -1,26 +1,30 @@
 nav {
+    position: absolute;
     background: black;
     color: white;
-    position: fixed;
-    height: 100vh;
-    width: 20vw;
+    width: 100%;
+    top: 0;
+    height: 20%;
 }
 
 nav ul {
-    padding-left: 5px;
     list-style: none;
+    padding: 0;
+    margin: 10px;
     display: flex;
-    flex-flow: column;
-    height: 100%;
+    flex-flow: row;
     justify-content: space-evenly;
 }
 
 nav ul li ul {
-    padding-left: 5px;
+    margin: 0;
+    padding-left: 8px;
+    display: flex;
+    flex-flow: column;
 }
 
 li {
-    font-size: 14px;
+    font-size: 18px;
 }
 
 nav a {
@@ -31,4 +35,11 @@ nav a {
 
 .active {
     color: aqua;
+}
+
+@media only screen and (max-width: 640px),
+  only screen and (max-device-width: 640px) {
+    li {
+        font-size: 16px;
+    }
 }
