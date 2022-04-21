@@ -4,7 +4,7 @@ nav {
     color: white;
     width: 100%;
     top: 0;
-    height: 20%;
+    height: 20vh;
 }
 
 nav ul {
@@ -41,5 +41,12 @@ nav a {
   only screen and (max-device-width: 640px) {
     li {
         font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 480px),
+  only screen and (max-device-width: 480px) {
+    li {
+        font-size: 46px;
     }
 }

@@ -55,3 +55,26 @@ p {
     font-size: 16px;
     width: 90%;
 }
+
+@media only screen and (max-width: 480px),
+  only screen and (max-device-width: 480px) {
+    body {
+        font-size: 38px;
+    }
+
+    #jumbo {
+        font-size: 40px;
+    }
+
+    h1 {
+        font-size: 112px;
+    }
+    
+    h2 {
+        font-size: 62px;
+    }
+
+    p {
+        font-size: 38px;
+    }
+}

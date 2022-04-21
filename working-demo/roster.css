@@ -40,7 +40,19 @@
 @media only screen and (max-width: 640px),
   only screen and (max-device-width: 640px) {
     .rosterbox {
-        height: 210;
-        width: 294;
+        height: 210px;
+        width: 294px;
+    }
+}
+
+@media only screen and (max-width: 480px),
+  only screen and (max-device-width: 480px) {
+    .rosterbox {
+        height: 575px;
+        width: 805px;
+    }
+
+    .rostertext {
+        font-size: 58px;
     }
 }

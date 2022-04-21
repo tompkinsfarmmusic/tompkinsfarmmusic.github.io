@@ -3,7 +3,7 @@
     flex-flow: row wrap;
     justify-content: center;
     gap: 25px;
-    align-items:center;
+    align-items: center;
 }
 
 #socials {
@@ -13,6 +13,10 @@
 
 #socials img {
     width: 90px;
+}
+
+#contactlogo img {
+    height: 300px;
 }
 
 #formsection {
@@ -25,5 +29,18 @@
         flex-flow: row;
         gap: 15px;
         padding-top: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px),
+  only screen and (max-device-width: 480px) {
+    #socials img {
+        width: 150px;
+    }
+    form, input, textarea, button {
+        font-size: 38px;
+    }
+    #contactlogo img {
+        height: 600px;
     }
 }
