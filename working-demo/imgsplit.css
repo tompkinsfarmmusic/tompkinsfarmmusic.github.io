@@ -3,6 +3,10 @@
     padding-bottom: 50px;
 }
 
+.imgsplit p {
+    width: 90%;
+}
+
 .imgsplit div {
     width: 50%;
     min-height: 200px;

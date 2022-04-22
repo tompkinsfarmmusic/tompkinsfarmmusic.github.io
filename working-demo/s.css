@@ -12,21 +12,19 @@ body {
     user-select: none;
 }
 
-.fullscreen {
-    height: 80vh;
-}
-
 #content {
     position: absolute;
-    padding-left: 5%;
-    padding-right: 5%;
-    top: 20%;
-    height: 80%;
+    width: 84%;
+    padding-left: 8%;
+    padding-right: 8%;
+    top: 10vh;
+    height: 90vh;
     overflow: auto;
     scroll-behavior: smooth;
 }
 
 #jumbo {
+    height: 70vh;
     font-size: x-large;
 }
 
@@ -53,28 +51,27 @@ h2 {
 
 p {
     font-size: 16px;
-    width: 90%;
 }
 
 @media only screen and (max-width: 480px),
   only screen and (max-device-width: 480px) {
     body {
-        font-size: 38px;
+        font-size: 16px;
     }
 
     #jumbo {
-        font-size: 40px;
+        font-size: 18px;
     }
 
     h1 {
-        font-size: 112px;
+        font-size: 32px;
     }
     
     h2 {
-        font-size: 62px;
+        font-size: 22px;
     }
 
     p {
-        font-size: 38px;
+        font-size: 16px;
     }
 }

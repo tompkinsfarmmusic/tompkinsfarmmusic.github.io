@@ -48,11 +48,11 @@
 @media only screen and (max-width: 480px),
   only screen and (max-device-width: 480px) {
     .rosterbox {
-        height: 575px;
-        width: 805px;
+        /* height: 575px;
+        width: 805px; */
     }
 
     .rostertext {
-        font-size: 58px;
+        /* font-size: 58px; */
     }
 }
