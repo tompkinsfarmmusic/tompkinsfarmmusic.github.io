@@ -17,14 +17,14 @@ body {
     width: 84%;
     padding-left: 8%;
     padding-right: 8%;
-    top: 10vh;
-    height: 90vh;
+    top: 2.5vh;
+    height: 97.5vh;
     overflow: auto;
     scroll-behavior: smooth;
 }
 
 #jumbo {
-    height: 70vh;
+    height: 95vh;
     font-size: x-large;
 }
 
