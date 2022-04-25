@@ -17,7 +17,8 @@
     position: absolute;
     width: 100%;
     text-align: center;
-    text-shadow: -2px -1px 0px #823329, 2px 1px 0px white;
+    color: blue;
+    text-shadow: -2px -1px 0px aqua, 2px 1px 0px white;
     font-size: 16px;
     font-weight: bold;
 }
@@ -27,7 +28,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    background: #823329;
+    background: blue;
     border-radius: 10px;
     z-index: 1;
 }
@@ -45,14 +46,14 @@
     }
 }
 
-@media only screen and (max-width: 480px),
+/* @media only screen and (max-width: 480px),
   only screen and (max-device-width: 480px) {
     .rosterbox {
-        /* height: 575px;
-        width: 805px; */
+        height: 575px;
+        width: 805px;
     }
 
     .rostertext {
-        /* font-size: 58px; */
+        font-size: 58px;
     }
-}
+} */
