@@ -57,7 +57,10 @@
                         we understand everyone has their own unique path to take.
                     </p>
                 </div>
-                <div class='imgsplit--img'></div>
+                <div class='imgsplit--img' 
+                     style="background: url('https://www.nicepng.com/png/full/896-8969562_stephen-a-smith.png') no-repeat center;
+                            background-size: cover;">
+                </div>
             </div>
         </section>
         <section id='intro--communication'>
@@ -72,7 +75,10 @@
                         of the company.  Transparency and trust are keys to success!
                     </p>
                 </div>
-                <div class='imgsplit--img'></div>
+                <div class='imgsplit--img' 
+                     style="background: url('https://cdn.nba.com/headshots/nba/latest/1040x760/201935.png') no-repeat center;
+                            background-size: cover;">
+                </div>
             </div>
         </section>
         <section id='intro--registration'>
@@ -85,7 +91,10 @@
                         matters: your art.  Let us handle it for you.
                     </p>
                 </div>
-                <div class='imgsplit--img'></div>
+                <div class='imgsplit--img' 
+                     style="background: url('https://www.seekpng.com/png/full/156-1562929_auto-insurance-trusted-by-shaq-the-general.png') no-repeat center;
+                            background-size: cover;">
+                </div>
             </div>
         </section>
         <section id='intro--revenue'>
@@ -99,7 +108,10 @@
                         increasing your revenue for every stream!
                     </p>
                 </div>
-                <div class='imgsplit--img'></div>
+                <div class='imgsplit--img' 
+                     style="background: url('https://www.alabamanews.net/content/uploads/2020/01/AP_886480029611.png') no-repeat center;
+                            background-size: cover;">
+                </div>
             </div>
         </section>
         <section id='intro--supervisors'>
@@ -113,7 +125,10 @@
                         state-of-the-art song databases!
                     </p>
                 </div>
-                <div class='imgsplit--img'></div>
+                <div class='imgsplit--img'
+                     style="background: url('https://cdn.nba.com/headshots/nba/latest/1040x760/202681.png') no-repeat center;
+                            background-size: cover;">
+                </div>
             </div>
         </section>
     </section>
@@ -354,24 +369,43 @@
 </div>
 
     <script>
-        window.addEventListener('DOMContentLoaded', () => {
+        // window.addEventListener('DOMContentLoaded', () => {
 
+        //     const observer = new IntersectionObserver(entries => {
+        //         entries.forEach(entry => {
+        //             const id = entry.target.getAttribute('id');
+        //             if (entry.intersectionRatio > 0) {
+        //                 document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
+        //             } else {
+        //                 document.querySelector(`nav a[href="#${id}"]`).classList.remove('active');
+        //             }
+        //         });
+        //     });
+
+        //     // Track all sections that have an `id` applied
+        //     document.querySelectorAll('section[id]').forEach((section) => {
+        //         observer.observe(section);
+        //     });
+
+        // });
+
+        window.addEventListener('DOMContentLoaded', () => {
             const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
+                for (entry of entries) {
                     const id = entry.target.getAttribute('id');
-                    if (entry.intersectionRatio > 0) {
+                    if(entry.isIntersecting) {
                         document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
                     } else {
                         document.querySelector(`nav a[href="#${id}"]`).classList.remove('active');
                     }
-                });
+                }
             });
-
-            // Track all sections that have an `id` applied
-            document.querySelectorAll('section[id]').forEach((section) => {
-                observer.observe(section);
+            [ document.getElementById('jumbo'), document.getElementById('intro'), 
+              document.getElementById('roster'), document.getElementById('about'),
+              document.getElementById('contact')
+            ].forEach((e) => {
+                observer.observe(e);
             });
-
         });
     </script>
 

@@ -30,15 +30,14 @@
     margin-right: 10px;
 }
 
-.imgsplit--img {
-    background: url('https://espnpressroom.com/us/files/2012/07/RS694805_20190920_DSC_8721.jpg') no-repeat center;
-    background-size: cover;
-}
-
 @media only screen and (max-width: 640px),
   only screen and (max-device-width: 640px) {
     .imgsplit div {
         width: 100%;
+    }
+
+    .imgsplit--img {
+        height: 50vh;
     }
 
     .rightimg,
@@ -51,5 +50,9 @@
     .rightimg .imgsplit--img,
     .rightimg .imgsplit--text {
         margin: 0;
+    }
+
+    .imgsplit p {
+        width: 100%;
     }
 }
