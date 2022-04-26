@@ -289,7 +289,8 @@
                 compositions were recorded by iconic easy listening artists, such as 
                 Perry Como and the Ray Charles Singers. Newer additions include more 
                 contemporary styles such as hip hop, EDM, and indie rock.
-                <div class="aboutimg" style="background: url(https://corcoran-com.euwest01.umbraco.io/media/3329/mamaroneck_neighborhood.jpg); 
+                <div class="aboutimg" style="
+                background: url(https://corcoran-com.euwest01.umbraco.io/media/3329/mamaroneck_neighborhood.jpg); 
                 background-size: cover;">
                 </div>
             </p>
@@ -375,31 +376,31 @@
 
 </div>
 
-    <script>
+<script>
 
-        window.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('DOMContentLoaded', () => {
 
-            const observer = new IntersectionObserver(entries => {
-                for (entry of entries) {
-                    const id = entry.target.getAttribute('id');
-                    if(entry.isIntersecting) {
-                        document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
-                    } else {
-                        document.querySelector(`nav a[href="#${id}"]`).classList.remove('active');
-                    }
+        const observer = new IntersectionObserver(entries => {
+            for (entry of entries) {
+                const id = entry.target.getAttribute('id');
+                if(entry.isIntersecting) {
+                    document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
+                } else {
+                    document.querySelector(`nav a[href="#${id}"]`).classList.remove('active');
                 }
-            });
-
-            [ document.getElementById('jumbo'), document.getElementById('intro'), 
-              document.getElementById('roster'), document.getElementById('about'),
-              document.getElementById('contact')
-            ].forEach((e) => {
-                observer.observe(e);
-            });
-        
+            }
         });
 
-    </script>
+        [ document.getElementById('jumbo'), document.getElementById('intro'), 
+            document.getElementById('roster'), document.getElementById('about'),
+            document.getElementById('contact')
+        ].forEach((e) => {
+            observer.observe(e);
+        });
+    
+    });
+
+</script>
 
 </body>
 
