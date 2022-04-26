@@ -24,7 +24,7 @@
 }
 
 form, input, textarea, button {
-    font-size: 28px;
+    font-size: 22px;
 }
 
 @media only screen and (max-width: 640px),
