@@ -2,11 +2,11 @@
     display: grid;
     position: absolute;
     z-index: 2;
-    top: -2.5vh;
-    width: 5vh; height: 5vh;
+    top: -4vh;
+    width: 8vh; height: 8vh;
     color: white;
-    line-height: 4.5vh;
-    font-size: 5vh;
+    line-height: 7vh;
+    font-size: 8vh;
 	text-align: center;
 	cursor: pointer;
 	appearance: none;
@@ -34,18 +34,18 @@
 }
 
 #nav-hider:not(:checked):not(:focus) ~ #content {
-    top: 5vh;
-    height: 95vh;
+    top: 8vh;
+    height: 92vh;
 }
 
 #nav-hider:not(:checked):not(:focus) ~ #content > #jumbo {
-    height: 95vh;
+    height: 92vh;
 }
 
 /* ---------------------------------------------------- */
 
 #nav-hider:checked {
-    top: 2.5vh;
+    top: 4vh;
     animation: movebutton 1s forwards;
 }
 
@@ -83,7 +83,7 @@
 
 @keyframes hide {
     100% {
-        top: -5vh;
+        top: -8vh;
     }
 }
 
@@ -108,7 +108,7 @@
 
 @keyframes shrink {
     100% {
-        top: 5vh;
-        height: 95vh;
+        top: 8vh;
+        height: 92vh;
     }
 }

@@ -23,6 +23,10 @@
     text-align: center;
 }
 
+form, input, textarea, button {
+    font-size: 28px;
+}
+
 @media only screen and (max-width: 640px),
   only screen and (max-device-width: 640px) {
     #socials {

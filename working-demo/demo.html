@@ -44,7 +44,7 @@
     </section>
 
     <section id='intro'>
-        <h1>OUR ETHOS</h1>
+        <h1>OUR PHILOSOPHY</h1>
         <section id='intro--songwriter-first'>
             <div class='imgsplit rightimg'>
                 <div class='imgsplit--text'>
@@ -59,7 +59,7 @@
                 </div>
                 <div class='imgsplit--img' 
                      style="background: url('https://www.nicepng.com/png/full/896-8969562_stephen-a-smith.png') no-repeat center;
-                            background-size: cover;">
+                            background-size: contain;">
                 </div>
             </div>
         </section>
@@ -77,7 +77,7 @@
                 </div>
                 <div class='imgsplit--img' 
                      style="background: url('https://cdn.nba.com/headshots/nba/latest/1040x760/201935.png') no-repeat center;
-                            background-size: cover;">
+                            background-size: contain;">
                 </div>
             </div>
         </section>
@@ -93,7 +93,7 @@
                 </div>
                 <div class='imgsplit--img' 
                      style="background: url('https://www.seekpng.com/png/full/156-1562929_auto-insurance-trusted-by-shaq-the-general.png') no-repeat center;
-                            background-size: cover;">
+                            background-size: contain;">
                 </div>
             </div>
         </section>
@@ -110,7 +110,7 @@
                 </div>
                 <div class='imgsplit--img' 
                      style="background: url('https://www.alabamanews.net/content/uploads/2020/01/AP_886480029611.png') no-repeat center;
-                            background-size: cover;">
+                            background-size: contain;">
                 </div>
             </div>
         </section>
@@ -127,7 +127,7 @@
                 </div>
                 <div class='imgsplit--img'
                      style="background: url('https://cdn.nba.com/headshots/nba/latest/1040x760/202681.png') no-repeat center;
-                            background-size: cover;">
+                            background-size: contain;">
                 </div>
             </div>
         </section>
@@ -369,27 +369,9 @@
 </div>
 
     <script>
-        // window.addEventListener('DOMContentLoaded', () => {
-
-        //     const observer = new IntersectionObserver(entries => {
-        //         entries.forEach(entry => {
-        //             const id = entry.target.getAttribute('id');
-        //             if (entry.intersectionRatio > 0) {
-        //                 document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
-        //             } else {
-        //                 document.querySelector(`nav a[href="#${id}"]`).classList.remove('active');
-        //             }
-        //         });
-        //     });
-
-        //     // Track all sections that have an `id` applied
-        //     document.querySelectorAll('section[id]').forEach((section) => {
-        //         observer.observe(section);
-        //     });
-
-        // });
 
         window.addEventListener('DOMContentLoaded', () => {
+
             const observer = new IntersectionObserver(entries => {
                 for (entry of entries) {
                     const id = entry.target.getAttribute('id');
@@ -400,13 +382,16 @@
                     }
                 }
             });
+
             [ document.getElementById('jumbo'), document.getElementById('intro'), 
               document.getElementById('roster'), document.getElementById('about'),
               document.getElementById('contact')
             ].forEach((e) => {
                 observer.observe(e);
             });
+        
         });
+
     </script>
 
 </body>

@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
 }
 
 #wrap {
@@ -17,19 +18,19 @@ body {
     width: 84%;
     padding-left: 8%;
     padding-right: 8%;
-    top: 2.5vh;
-    height: 97.5vh;
+    top: 4vh;
+    height: 96vh;
     overflow: auto;
     scroll-behavior: smooth;
 }
 
 #jumbo {
     height: 95vh;
-    font-size: x-large;
+    font-size: 26px;
 }
 
 #logoarea {
-    height: 85%;
+    height: 80%;
     background: url(./img/TFM4\ transparent\ black\ 500.png) center no-repeat;
     background-size: contain;
 }
@@ -41,19 +42,19 @@ body {
 }
 
 h1 {
-    font-size: 70px;
+    font-size: 48px;
     text-align: center;
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 36px;
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
 }
 
-@media only screen and (max-width: 480px),
+/* @media only screen and (max-width: 480px),
   only screen and (max-device-width: 480px) {
     body {
         font-size: 16px;
@@ -74,4 +75,4 @@ p {
     p {
         font-size: 16px;
     }
-}
+} */
