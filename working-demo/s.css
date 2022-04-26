@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 #wrap {
@@ -13,11 +13,16 @@ body {
     user-select: none;
 }
 
+hr {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 #content {
     position: absolute;
-    width: 84%;
-    padding-left: 8%;
-    padding-right: 8%;
+    width: 72vw;
+    padding-left: 14vw;
+    padding-right: 14vw;
     top: 4vh;
     height: 96vh;
     overflow: auto;
@@ -42,16 +47,16 @@ body {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 40px;
     text-align: center;
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 28px;
 }
 
 p {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 /* @media only screen and (max-width: 480px),

@@ -9,7 +9,10 @@
 
 .imgsplit div {
     width: 50%;
-    min-height: 200px;
+    min-height: 40vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 }
 
 .rightimg {
@@ -18,6 +21,10 @@
 
 .leftimg {
     flex-flow: row-reverse;
+}
+
+.rightimg .imgsplit--text {
+    margin-left: 30px;
 }
 
 .leftimg .imgsplit--text,
@@ -32,12 +39,12 @@
 
 @media only screen and (max-width: 640px),
   only screen and (max-device-width: 640px) {
+    .imgsplit {
+        padding-bottom: 0;
+    }
+    
     .imgsplit div {
         width: 100%;
-    }
-
-    .imgsplit--img {
-        height: 50vh;
     }
 
     .rightimg,
