@@ -37,3 +37,10 @@ nav a {
             font-size: 3.5vw;
         }
 }
+
+@media only screen
+    and (max-device-width: 480px) and (orientation: landscape) {
+        nav ul {
+            font-size: 3.5vw;
+        }
+}
