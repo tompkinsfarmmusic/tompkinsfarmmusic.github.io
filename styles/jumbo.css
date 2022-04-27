@@ -1,0 +1,16 @@
+#jumbo {
+    height: 95vh;
+    font-size: 26px;
+}
+
+#logoarea {
+    height: 80%;
+    background: url(../img/TFM4\ transparent\ black\ 500.png) center no-repeat;
+    background-size: contain;
+}
+
+#tagline {
+    height: 15%;
+    width: 100%;
+    text-align: center;
+}
