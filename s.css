@@ -4,13 +4,13 @@ body {
     font-size: 16px;
 }
 
+.noselect {
+    user-select: none;
+}
+
 #wrap {
     display: flex;
     flex-flow: column;
-}
-
-.noselect {
-    user-select: none;
 }
 
 hr {
@@ -61,4 +61,8 @@ p {
 
 .aboutimg {
     height: 70vh;
+}
+
+#footer {
+    text-align: center;
 }
