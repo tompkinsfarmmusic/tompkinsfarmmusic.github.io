@@ -37,8 +37,7 @@
     margin-right: 10px;
 }
 
-@media only screen and (max-width: 640px),
-  only screen and (max-device-width: 640px) {
+@media only screen and (max-width: 640px) {
     .imgsplit {
         padding-bottom: 0;
     }

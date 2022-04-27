@@ -27,8 +27,7 @@ form, input, textarea, button {
     font-size: 22px;
 }
 
-@media only screen and (max-width: 640px),
-  only screen and (max-device-width: 640px) {
+@media only screen and (max-width: 640px) {
     #socials {
         flex-flow: row;
         gap: 15px;
