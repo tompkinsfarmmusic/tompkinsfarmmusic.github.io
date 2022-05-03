@@ -1,11 +1,3 @@
-/* @import url("./styles/s.css");
-@import url("./styles/nav.css");
-@import url("./styles/nav-hider.css");
-@import url("./styles/jumbo.css");
-@import url("./styles/imgsplit.css");
-@import url("./styles/roster.css");
-@import url("./styles/contact.css"); */
-
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -13,12 +5,20 @@ body {
 }
 
 .noselect {
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 #wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
 }
 
 h1 {
@@ -70,15 +70,26 @@ nav ul {
     font-size: 2.5vh;
     margin: 0;
     height: 8vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row;
-    justify-content: space-evenly;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 nav a {
     text-decoration: none;
     color: white;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
 }
 
@@ -100,6 +111,7 @@ nav a {
 }
 
 #nav-hider {
+    display: -ms-grid;
     display: grid;
     position: absolute;
     z-index: 2;
@@ -110,7 +122,9 @@ nav a {
     font-size: 8vh;
 	text-align: center;
 	cursor: pointer;
-	appearance: none;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
 }
 
 #nav-hider:checked::before {
@@ -119,7 +133,9 @@ nav a {
 
 #nav-hider:not(:checked)::before {
     content: '«';
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
 }
 
 /* ---------------------------------------------------- */
@@ -147,32 +163,46 @@ nav a {
 
 #nav-hider:checked {
     top: 4vh;
-    animation: movebutton 1s forwards;
+    -webkit-animation: movebutton 1s forwards;
+            animation: movebutton 1s forwards;
 }
 
 #nav-hider:checked ~ nav {
-    animation: hide 1s forwards;
+    -webkit-animation: hide 1s forwards;
+            animation: hide 1s forwards;
 }
 
 #nav-hider:checked ~ #content {
-    animation: grow 1s forwards;
+    -webkit-animation: grow 1s forwards;
+            animation: grow 1s forwards;
 }
 
 /* ---------------------------------------------------- */
 
 #nav-hider:not(:checked) {
-    animation: movebuttonback 1s forwards;
+    -webkit-animation: movebuttonback 1s forwards;
+            animation: movebuttonback 1s forwards;
 }
 
 #nav-hider:not(:checked):focus ~ #content {
-    animation: shrink 1s forwards;
+    -webkit-animation: shrink 1s forwards;
+            animation: shrink 1s forwards;
 }
 
 #nav-hider:not(:checked):focus ~ nav {
-    animation: unhide 1s forwards;
+    -webkit-animation: unhide 1s forwards;
+            animation: unhide 1s forwards;
 }
 
 /* ---------------------------------------------------- */
+
+@-webkit-keyframes movebutton {
+    100% {
+        background: blue;
+        border-radius: 1vh;
+        top: 0;
+    }
+}
 
 @keyframes movebutton {
     100% {
@@ -182,9 +212,22 @@ nav a {
     }
 }
 
+@-webkit-keyframes hide {
+    100% {
+        top: -8vh;
+    }
+}
+
 @keyframes hide {
     100% {
         top: -8vh;
+    }
+}
+
+@-webkit-keyframes grow {
+    100% {
+        top: 0;
+        height: 100vh;
     }
 }
 
@@ -195,7 +238,19 @@ nav a {
     }
 }
 
+@-webkit-keyframes movebuttonback {
+    100% {
+        top: 0;
+    }
+}
+
 @keyframes movebuttonback {
+    100% {
+        top: 0;
+    }
+}
+
+@-webkit-keyframes unhide {
     100% {
         top: 0;
     }
@@ -204,6 +259,13 @@ nav a {
 @keyframes unhide {
     100% {
         top: 0;
+    }
+}
+
+@-webkit-keyframes shrink {
+    100% {
+        top: 8vh;
+        height: 92vh;
     }
 }
 
@@ -221,7 +283,7 @@ nav a {
 
 #logoarea {
     height: 80%;
-    background: url(../img/TFM4\ transparent\ black\ 500.png) center no-repeat;
+    background: url('./img/TFM4 transparent black 500.png') center no-repeat;
     background-size: contain;
 }
 
@@ -232,6 +294,8 @@ nav a {
 }
 
 .imgsplit {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-bottom: 50px;
 }
@@ -243,17 +307,30 @@ nav a {
 .imgsplit div {
     width: 50%;
     min-height: 40vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .rightimg {
-    flex-flow: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
 }
 
 .leftimg {
-    flex-flow: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: row-reverse;
+            flex-flow: row-reverse;
 }
 
 .rightimg .imgsplit--text {
@@ -281,7 +358,10 @@ nav a {
 
     .rightimg,
     .leftimg {
-        flex-flow: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column;
+                flex-flow: column;
     }
 
     .leftimg .imgsplit--img,
@@ -297,9 +377,16 @@ nav a {
 }
 
 #rostercontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .rosterbox {
@@ -344,16 +431,30 @@ nav a {
 }
 
 #contactcontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 25px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
 }
 
 #socials img {
@@ -374,7 +475,10 @@ form, input, textarea, button {
 
 @media only screen and (max-width: 640px) {
     #socials {
-        flex-flow: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row;
+                flex-flow: row;
         gap: 15px;
         padding-top: 15px;
     }
