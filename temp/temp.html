@@ -2,7 +2,73 @@
     <link rel="stylesheet" href="test.css">
 </head>
 
-<div id="nav">
-</div>
-<div id="content">
-</div>
+<body>
+    <div id='d'></div>
+    <button class="caroubutton" id='prev' onclick='prev()'>
+        <
+    </button>
+    <button class="caroubutton" id='next' onclick='next()'>
+        >
+    </button>
+
+    <script>
+        var items = [
+        '<div class="box one"></div>',
+        '<div class="box two"></div>',
+        '<div class="box three"></div>',
+        '<div class="box four"></div>',
+        '<div class="box five"></div>',
+        '<div class="box six"></div>',
+        '<div class="box seven"></div>',
+        '<div class="box eight"></div>',
+        '<div class="box nine"></div>',
+        '<div class="box ten"></div>',
+        '<div class="box eleven"></div>',
+        '<div class="box twelve"></div>',
+        ];
+
+        document.getElementById('d').innerHTML = items.toString().replaceAll(',','');
+
+        const slide = [
+            { transform: 'translate(0)' },
+            { transform: 'translate(-14vw)' }
+        ];
+
+        const slideback = [
+            { transform: 'translate(0)' },
+            { transform: 'translate(14vw)' }
+        ];
+
+        const slidetime = {
+            duration: 100,
+            iterations: 1,
+            easing: "ease-in-out"
+        }
+        
+        function next() {
+            let els = document.getElementsByClassName('box');
+            [].forEach.call(els, e => {
+                e.animate(slide, slidetime);
+            });
+            let interv = setInterval(() => {
+                items = items.concat(items.shift());
+                document.getElementById('d').innerHTML = items.toString().replaceAll(',','');
+                clearInterval(interv); 
+            }, 100);
+        }
+
+        function prev() {
+            
+            let els = document.getElementsByClassName('box');
+            [].forEach.call(els, e => {
+                e.animate(slideback, slidetime);
+            });
+            let interv = setInterval(() => {
+                items.unshift(items.pop());
+                document.getElementById('d').innerHTML = items.toString().replaceAll(',','');
+                clearInterval(interv); 
+            }, 100);
+        }
+
+    </script>
+</body>
