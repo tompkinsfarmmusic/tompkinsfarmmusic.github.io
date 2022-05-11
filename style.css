@@ -2,20 +2,24 @@
     --color-dark:       rgb(18, 18, 61);
     --color-dark-rgb:     18, 18, 61;
     --color-light:      rgb(202, 202, 241);
+    --color-light-rgb:    202, 202, 241;
     --color-bg1:        rgb(0, 0, 255);
     --color-bg2:        rgb(101, 101, 255);
+    --color-bg2-rgb:      101, 101, 255;
     --color-bg3:        rgb(182, 226, 255);
-    --sshow-height:       10vw;
-    --sshow-width:        14vw;
+    --color-bg3-rgb:      182, 226, 255;
+    --sshow-height:       15vw; /* 10vw; */
+    --sshow-width:        21vw; /* 14vw; */
     --numslides:          12;
 }
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-family: 'Arial Narrow', 'Helvetica', sans-serif;
+    font-size: 18px;
     color: var(--color-dark);
     background: var(--color-light);
+    -webkit-overflow-scrolling: touch;
 }
 
 .noselect {
@@ -46,8 +50,23 @@ h2 {
 
 hr {
     border: 1px solid var(--color-dark);
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 0;
+}
+
+.fade {
+    border: none;
+    padding: 8vh;
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg2)), color-stop(var(--color-bg3)), to(var(--color-light)));
+    background: -o-linear-gradient(var(--color-bg2), var(--color-bg3), var(--color-light));
+    background: linear-gradient(var(--color-bg2), var(--color-bg3), var(--color-light));
+}
+
+.fade-2way {
+    border: none;
+    padding: 8vh;
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), color-stop(20%, rgba(var(--color-bg2-rgb),.3)), to(var(--color-light)));
+    background: -o-linear-gradient(var(--color-light), rgba(var(--color-bg2-rgb),.3) 20%, var(--color-light));
+    background: linear-gradient(var(--color-light), rgba(var(--color-bg2-rgb),.3) 20%, var(--color-light));
 }
 
 .buffer {
@@ -196,28 +215,44 @@ nav a {
 /* ---------------------------------------------------- */
 
 #jumbo {
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg2)), color-stop(60%, var(--color-light)), color-stop(80%, var(--color-bg3)), to(var(--color-light)));
-    background: -o-linear-gradient(var(--color-bg2), var(--color-light) 60%, var(--color-bg3) 80%, var(--color-light) 100%);
-    background: linear-gradient(var(--color-bg2), var(--color-light) 60%, var(--color-bg3) 80%, var(--color-light) 100%);
-    height: 95vh;
-    font-size: 26px;
+    background: -webkit-gradient(linear, 
+                                left top, left bottom, 
+                                from(rgba(var(--color-bg2-rgb), 0.8)), 
+                                color-stop(60%, rgba(var(--color-light-rgb), 0.8)), 
+                                color-stop(80%, rgba(var(--color-bg3-rgb), 0.8)), 
+                                to(rgba(var(--color-light-rgb), 0.8))),
+                url(https://static01.nyt.com/images/2017/07/23/realestate/23LIVING-slide-N8DB/23LIVING-slide-N8DB-videoSixteenByNineJumbo1600.jpg);
+    background: -o-linear-gradient(rgba(var(--color-bg2-rgb), 0.8), 
+                                rgba(var(--color-light-rgb), 0.8) 60%, 
+                                rgba(var(--color-bg3-rgb), 0.8) 80%, 
+                                rgba(var(--color-light-rgb), 0.8) 100%),
+                url(https://static01.nyt.com/images/2017/07/23/realestate/23LIVING-slide-N8DB/23LIVING-slide-N8DB-videoSixteenByNineJumbo1600.jpg);
+    background: linear-gradient(rgba(var(--color-bg2-rgb), 0.8), 
+                                rgba(var(--color-light-rgb), 0.8) 60%, 
+                                rgba(var(--color-bg3-rgb), 0.8) 80%, 
+                                rgba(var(--color-light-rgb), 0.8) 100%),
+                url(https://static01.nyt.com/images/2017/07/23/realestate/23LIVING-slide-N8DB/23LIVING-slide-N8DB-videoSixteenByNineJumbo1600.jpg);
+    height: 92vh;
+    position: relative;
 }
 
 #logoarea {
-    height: 60%;
+    height: 58vh;
     background: url('./img/TFM4 transparent black 500.png') center no-repeat;
     background-size: contain;
 }
 
 #tagline {
-    height: 15%;
+    position: relative;
+    top: -5vh;
     width: 100%;
     text-align: center;
+    font-size: 22px;
 }
 
 .sshowbutton {
     position: absolute;
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
     height: var(--sshow-height);
     width: var(--sshow-width);
     font-size: 60px;
@@ -225,40 +260,43 @@ nav a {
     color: var(--color-bg1);
     text-shadow: 0px 1px 1px var(--color-light);
     cursor: pointer;
+    text-align: center;
+    bottom: 0;
 }
 
 #prev {
-    background: -webkit-gradient(linear, right top, left top, from(rgba(0,0,0,0)), to(rgba(var(--color-dark-rgb),.8)));
     background: -o-linear-gradient(right, rgba(0,0,0,0), rgba(var(--color-dark-rgb),.8));
+    background: -webkit-gradient(linear, right top, left top, from(rgba(0,0,0,0)), to(rgba(var(--color-dark-rgb),.8)));
     background: linear-gradient(to left, rgba(0,0,0,0), rgba(var(--color-dark-rgb),.8));
     left: 0vw;
 }
 
 #prev:hover {
-    background: -webkit-gradient(linear, right top, left top, from(rgba(0,0,0,0)), color-stop(rgba(var(--color-dark-rgb),.8)), to(rgba(var(--color-dark-rgb),1)));
     background: -o-linear-gradient(right, rgba(0,0,0,0), rgba(var(--color-dark-rgb),.8), rgba(var(--color-dark-rgb),1));
+    background: -webkit-gradient(linear, right top, left top, from(rgba(0,0,0,0)), color-stop(rgba(var(--color-dark-rgb),.8)), to(rgba(var(--color-dark-rgb),1)));
     background: linear-gradient(to left, rgba(0,0,0,0), rgba(var(--color-dark-rgb),.8), rgba(var(--color-dark-rgb),1));
 }
 
 #next {
-    background: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,0)), to(rgba(var(--color-dark-rgb),.8)));
     background: -o-linear-gradient(left, rgba(0,0,0,0), rgba(var(--color-dark-rgb),.8));
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,0)), to(rgba(var(--color-dark-rgb),.8)));
     background: linear-gradient(to right, rgba(0,0,0,0), rgba(var(--color-dark-rgb),.8));
     right: 0vw;
 }
 
 #next:hover {
-    background: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,0)), color-stop(rgba(var(--color-dark-rgb),.8)), to(rgba(var(--color-dark-rgb),1)));
     background: -o-linear-gradient(left, rgba(0,0,0,0), rgba(var(--color-dark-rgb),.8), rgba(var(--color-dark-rgb),1));
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,0)), color-stop(rgba(var(--color-dark-rgb),.8)), to(rgba(var(--color-dark-rgb),1)));
     background: linear-gradient(to right, rgba(0,0,0,0), rgba(var(--color-dark-rgb),.8), rgba(var(--color-dark-rgb),1));
 }
 
 #slideshow {
     position: absolute;
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
     width: calc(var(--sshow-width) * var(--numslides));
     left: -28vw;
     height: var(--sshow-height);
+    bottom: 0;
 }
 
 .sshowbox {
@@ -330,32 +368,32 @@ nav a {
 /* ---------------------------------------------------- */
 
 #intro--songwriter-first {
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), to(var(--color-bg3)));
     background: -o-linear-gradient(var(--color-light), var(--color-bg3));
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), to(var(--color-bg3)));
     background: linear-gradient(var(--color-light), var(--color-bg3));
 }
 
 #intro--communication {
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg3)), to(var(--color-bg2)));
     background: -o-linear-gradient(var(--color-bg3), var(--color-bg2));
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg3)), to(var(--color-bg2)));
     background: linear-gradient(var(--color-bg3), var(--color-bg2));
 }
 
 #intro--registration {
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg2)), to(var(--color-bg3)));
     background: -o-linear-gradient(var(--color-bg2), var(--color-bg3));
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg2)), to(var(--color-bg3)));
     background: linear-gradient(var(--color-bg2), var(--color-bg3));
 }
 
 #intro--revenue {
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg3)), to(var(--color-bg2)));
     background: -o-linear-gradient(var(--color-bg3), var(--color-bg2));
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg3)), to(var(--color-bg2)));
     background: linear-gradient(var(--color-bg3), var(--color-bg2));
 }
 
 #intro--supervisors {
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg2)), to(var(--color-light)));
     background: -o-linear-gradient(var(--color-bg2), var(--color-light));
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg2)), to(var(--color-light)));
     background: linear-gradient(var(--color-bg2), var(--color-light));
 }
 
@@ -416,8 +454,8 @@ nav a {
 /* ---------------------------------------------------- */
 
 #roster {
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), color-stop(var(--color-bg2)), color-stop(var(--color-bg3)), color-stop(var(--color-bg2)), to(var(--color-light)));
     background: -o-linear-gradient(var(--color-light), var(--color-bg2), var(--color-bg3), var(--color-bg2), var(--color-light));
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), color-stop(var(--color-bg2)), color-stop(var(--color-bg3)), color-stop(var(--color-bg2)), to(var(--color-light)));
     background: linear-gradient(var(--color-light), var(--color-bg2), var(--color-bg3), var(--color-bg2), var(--color-light));
 }
 
@@ -471,8 +509,8 @@ nav a {
 /* ---------------------------------------------------- */
 
 #about {
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), color-stop(var(--color-bg2)), color-stop(var(--color-bg3)), color-stop(var(--color-bg2)), to(var(--color-light)));
     background: -o-linear-gradient(var(--color-light), var(--color-bg2), var(--color-bg3), var(--color-bg2), var(--color-light));
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), color-stop(var(--color-bg2)), color-stop(var(--color-bg3)), color-stop(var(--color-bg2)), to(var(--color-light)));
     background: linear-gradient(var(--color-light), var(--color-bg2), var(--color-bg3), var(--color-bg2), var(--color-light));
 }
 
@@ -482,11 +520,15 @@ nav a {
     height: 70vh;
 }
 
+#aboutimg-bottom {
+    margin-bottom: 0;
+}
+
 /* ---------------------------------------------------- */
 
 #contact {
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), color-stop(var(--color-bg3)), to(var(--color-light)));
     background: -o-linear-gradient(var(--color-light), var(--color-bg3), var(--color-light));
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), color-stop(var(--color-bg3)), to(var(--color-light)));
     background: linear-gradient(var(--color-light), var(--color-bg3), var(--color-light));
 }
 
@@ -539,13 +581,17 @@ form, input, textarea, button {
 
 @media only screen and (max-width: 640px) {
     :root {
-        --sshow-height: 20vw;
-        --sshow-width:  28vw;
+        --sshow-height: 37.5vw;
+        --sshow-width:  52.5vw;
     }
     
     .buffer {
         margin-left: 14vw;
         margin-right: 14vw;
+    }
+
+    #tagline {
+        font-size: 20px;
     }
 
     .imgsplit {
