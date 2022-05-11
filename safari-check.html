@@ -1,0 +1,17 @@
+<head>
+<style>
+    #ans::after {
+        content:'no';
+    }
+
+    @supports(-webkit-touch-callout: none) {
+        #ans::after {
+            content:'yes';
+        }
+    }
+</style>
+</head>
+<body>
+    <h1>supports -webkit-touch-callout ? </h1> 
+    <h1 id="ans"></h1>
+</body>
