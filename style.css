@@ -65,16 +65,16 @@ hr {
 .fade {
     border: none;
     padding: calc(var(--vh) * 8);
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg2)), color-stop(var(--color-bg3)), to(var(--color-light)));
     background: -o-linear-gradient(var(--color-bg2), var(--color-bg3), var(--color-light));
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg2)), color-stop(var(--color-bg3)), to(var(--color-light)));
     background: linear-gradient(var(--color-bg2), var(--color-bg3), var(--color-light));
 }
 
 .fade-2way {
     border: none;
     padding: calc(var(--vh) * 8);
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), color-stop(20%, rgba(var(--color-bg2-rgb),.3)), to(var(--color-light)));
     background: -o-linear-gradient(var(--color-light), rgba(var(--color-bg2-rgb),.3) 20%, var(--color-light));
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), color-stop(20%, rgba(var(--color-bg2-rgb),.3)), to(var(--color-light)));
     background: linear-gradient(var(--color-light), rgba(var(--color-bg2-rgb),.3) 20%, var(--color-light));
 }
 
@@ -224,17 +224,17 @@ nav a {
 /* ---------------------------------------------------- */
 
 #jumbo {
+    background: -o-linear-gradient(rgba(var(--color-bg2-rgb), 0.8), 
+                                rgba(var(--color-light-rgb), 0.8) 60%, 
+                                rgba(var(--color-bg3-rgb), 0.8) 80%, 
+                                rgba(var(--color-light-rgb), 0.8) 100%),
+                url(https://static01.nyt.com/images/2017/07/23/realestate/23LIVING-slide-N8DB/23LIVING-slide-N8DB-videoSixteenByNineJumbo1600.jpg);
     background: -webkit-gradient(linear, 
                                 left top, left bottom, 
                                 from(rgba(var(--color-bg2-rgb), 0.8)), 
                                 color-stop(60%, rgba(var(--color-light-rgb), 0.8)), 
                                 color-stop(80%, rgba(var(--color-bg3-rgb), 0.8)), 
                                 to(rgba(var(--color-light-rgb), 0.8))),
-                url(https://static01.nyt.com/images/2017/07/23/realestate/23LIVING-slide-N8DB/23LIVING-slide-N8DB-videoSixteenByNineJumbo1600.jpg);
-    background: -o-linear-gradient(rgba(var(--color-bg2-rgb), 0.8), 
-                                rgba(var(--color-light-rgb), 0.8) 60%, 
-                                rgba(var(--color-bg3-rgb), 0.8) 80%, 
-                                rgba(var(--color-light-rgb), 0.8) 100%),
                 url(https://static01.nyt.com/images/2017/07/23/realestate/23LIVING-slide-N8DB/23LIVING-slide-N8DB-videoSixteenByNineJumbo1600.jpg);
     background: linear-gradient(rgba(var(--color-bg2-rgb), 0.8), 
                                 rgba(var(--color-light-rgb), 0.8) 60%, 
