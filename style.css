@@ -1,16 +1,26 @@
 :root {
+    /* colors */
     --color-dark:       rgb(18, 18, 61);
-    --color-dark-rgb:     18, 18, 61;
+    --color-dark-rgb:   18, 18, 61;
     --color-light:      rgb(202, 202, 241);
-    --color-light-rgb:    202, 202, 241;
+    --color-light-rgb:  202, 202, 241;
     --color-bg1:        rgb(0, 0, 255);
     --color-bg2:        rgb(101, 101, 255);
-    --color-bg2-rgb:      101, 101, 255;
+    --color-bg2-rgb:    101, 101, 255;
     --color-bg3:        rgb(182, 226, 255);
-    --color-bg3-rgb:      182, 226, 255;
-    --sshow-height:       15vw; /* 10vw; */
-    --sshow-width:        21vw; /* 14vw; */
-    --numslides:          12;
+    --color-bg3-rgb:    182, 226, 255;
+    /* slideshow */
+    --sshow-height:     15vw; /* 10vw; */
+    --sshow-width:      21vw; /* 14vw; */
+    --numslides:        12;
+    /* vh */
+    --nav-height:              calc(var(--vh) * 8);
+    --nav-height-neg:          calc(var(--nav-height) * -1);
+    --nav-half:                calc(var(--nav-height) / 2);
+    --nav-half-neg:            calc(var(--nav-half) * -1);
+    --vh100:                   calc(var(--vh) * 100);
+    --content-height:          calc(var(--vh100) - var(--nav-height));
+    --content-height-nav-half: calc(var(--vh100) - var(--nav-half));
 }
 
 body {
@@ -19,7 +29,6 @@ body {
     font-size: 18px;
     color: var(--color-dark);
     background: var(--color-light);
-    -webkit-overflow-scrolling: touch;
 }
 
 .noselect {
@@ -55,7 +64,7 @@ hr {
 
 .fade {
     border: none;
-    padding: 8vh;
+    padding: calc(var(--vh) * 8);
     background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg2)), color-stop(var(--color-bg3)), to(var(--color-light)));
     background: -o-linear-gradient(var(--color-bg2), var(--color-bg3), var(--color-light));
     background: linear-gradient(var(--color-bg2), var(--color-bg3), var(--color-light));
@@ -63,7 +72,7 @@ hr {
 
 .fade-2way {
     border: none;
-    padding: 8vh;
+    padding: calc(var(--vh) * 8);
     background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), color-stop(20%, rgba(var(--color-bg2-rgb),.3)), to(var(--color-light)));
     background: -o-linear-gradient(var(--color-light), rgba(var(--color-bg2-rgb),.3) 20%, var(--color-light));
     background: linear-gradient(var(--color-light), rgba(var(--color-bg2-rgb),.3) 20%, var(--color-light));
@@ -76,8 +85,8 @@ hr {
 
 #content {
     position: absolute;
-    top: 4vh;
-    height: 96vh;
+    top: var(--nav-half);
+    height: var(--content-height-nav-half);
     overflow: auto;
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -95,17 +104,17 @@ nav {
     background: var(--color-dark);
     color: var(--color-light);
     width: 100%;
-    top: -4vh;
-    height: 8vh;
+    top: var(--nav-half-neg);
+    height: var(--nav-height);
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    padding-left: 8vh;
-    font-size: 2.5vh;
+    padding-left: calc(var(--vh) * 8);
+    font-size: calc(var(--vh) * 2.5);
     margin: 0;
-    height: 8vh;
+    height: var(--nav-height);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -141,11 +150,11 @@ nav a {
     display: grid;
     position: absolute;
     z-index: 2;
-    top: -4vh;
-    width: 8vh; height: 8vh;
+    top: var(--nav-half-neg);
+    width: var(--nav-height); height: var(--nav-height);
     color: var(--color-light);
-    line-height: 7vh;
-    font-size: 8vh;
+    line-height: calc(var(--nav-height) - var(--vh));
+    font-size: var(--nav-height);
 	text-align: center;
 	cursor: pointer;
 	-webkit-appearance: none;
@@ -173,16 +182,16 @@ nav a {
 }
 
 #nav-hider:not(:checked):not(:focus) ~ #content {
-    top: 8vh;
-    height: 92vh;
+    top: var(--nav-height);
+    height: var(--content-height);
 }
 
 #nav-hider:not(:checked):not(:focus) ~ #content > #jumbo {
-    height: 92vh;
+    height: var(--content-height);
 }
 
 #nav-hider:checked {
-    top: 4vh;
+    top: var(--nav-half);
     -webkit-animation: movebutton 1s forwards;
             animation: movebutton 1s forwards;
 }
@@ -232,19 +241,19 @@ nav a {
                                 rgba(var(--color-bg3-rgb), 0.8) 80%, 
                                 rgba(var(--color-light-rgb), 0.8) 100%),
                 url(https://static01.nyt.com/images/2017/07/23/realestate/23LIVING-slide-N8DB/23LIVING-slide-N8DB-videoSixteenByNineJumbo1600.jpg);
-    height: 92vh;
+    height: var(--content-height);
     position: relative;
 }
 
 #logoarea {
-    height: 58vh;
+    height: calc(var(--vh) * 58);
     background: url('./img/TFM4 transparent black 500.png') center no-repeat;
     background-size: contain;
 }
 
 #tagline {
     position: relative;
-    top: -5vh;
+    top: calc(var(--vh) * -5);
     width: 100%;
     text-align: center;
     font-size: 22px;
@@ -252,7 +261,6 @@ nav a {
 
 .sshowbutton {
     position: absolute;
-    /* margin-top: 5vh; */
     height: var(--sshow-height);
     width: var(--sshow-width);
     font-size: 60px;
@@ -292,7 +300,6 @@ nav a {
 
 #slideshow {
     position: absolute;
-    /* margin-top: 5vh; */
     width: calc(var(--sshow-width) * var(--numslides));
     left: -28vw;
     height: var(--sshow-height);
@@ -410,7 +417,7 @@ nav a {
 
 .imgsplit div {
     width: 50%;
-    min-height: 40vh;
+    min-height: calc(var(--vh) * 40);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -515,9 +522,9 @@ nav a {
 }
 
 .aboutimg {
-    margin-top: 8vh;
-    margin-bottom: 8vh;
-    height: 70vh;
+    margin-top: calc(var(--vh) * 8);
+    margin-bottom: calc(var(--vh) * 8);
+    height: calc(var(--vh) * 70);
 }
 
 #aboutimg-bottom {
@@ -655,7 +662,7 @@ form, input, textarea, button {
 @-webkit-keyframes movebutton {
     100% {
         background: var(--color-bg1);
-        border-radius: 1vh;
+        border-radius: var(--vh);
         top: 0;
     }
 }
@@ -663,34 +670,34 @@ form, input, textarea, button {
 @keyframes movebutton {
     100% {
         background: var(--color-bg1);
-        border-radius: 1vh;
+        border-radius: var(--vh);
         top: 0;
     }
 }
 
 @-webkit-keyframes hide {
     100% {
-        top: -8vh;
+        top: var(--nav-height-neg);
     }
 }
 
 @keyframes hide {
     100% {
-        top: -8vh;
+        top: var(--nav-height-neg);
     }
 }
 
 @-webkit-keyframes grow {
     100% {
         top: 0;
-        height: 100vh;
+        height: var(--vh100);
     }
 }
 
 @keyframes grow {
     100% {
         top: 0;
-        height: 100vh;
+        height: var(--vh100);
     }
 }
 
@@ -720,14 +727,14 @@ form, input, textarea, button {
 
 @-webkit-keyframes shrink {
     100% {
-        top: 8vh;
-        height: 92vh;
+        top: var(--nav-height);
+        height: var(--content-height);
     }
 }
 
 @keyframes shrink {
     100% {
-        top: 8vh;
-        height: 92vh;
+        top: var(--nav-height);
+        height: var(--content-height);
     }
 }
