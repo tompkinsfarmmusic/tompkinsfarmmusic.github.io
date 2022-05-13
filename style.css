@@ -1,14 +1,13 @@
 :root {
-    color-scheme:       only light;
     /* colors */
-    --color-dark:       rgb(18, 18, 61);
+    --color-dark:       rgb(38, 43, 109);
     --color-dark-rgb:   18, 18, 61;
-    --color-light:      rgb(202, 202, 241);
+    --color-light:      rgb(190, 231, 255);
     --color-light-rgb:  202, 202, 241;
-    --color-bg1:        rgb(0, 0, 255);
-    --color-bg2:        rgb(101, 101, 255);
+    --color-bg1:        rgb(50, 50, 255);
+    --color-bg2:        rgb(101, 124, 255);
     --color-bg2-rgb:    101, 101, 255;
-    --color-bg3:        rgb(182, 226, 255);
+    --color-bg3:        rgb(160, 231, 253);
     --color-bg3-rgb:    182, 226, 255;
     /* slideshow */
     --sshow-height:     15vw; /* 10vw; */
@@ -71,6 +70,14 @@ hr {
     background: linear-gradient(var(--color-bg2), var(--color-bg3), var(--color-light));
 }
 
+.fade-footer {
+    border: none;
+    padding: calc(var(--vh) * 4);
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), to(var(--color-bg2)));
+    background: -o-linear-gradient(var(--color-light), var(--color-bg2));
+    background: linear-gradient(var(--color-light), var(--color-bg2));
+}
+
 .fade-2way {
     border: none;
     padding: calc(var(--vh) * 8);
@@ -95,7 +102,12 @@ hr {
 }
 
 #footer {
+    padding: calc(var(--vh) * 4);
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg2)), to(var(--color-dark)));
+    background: -o-linear-gradient(var(--color-bg2), var(--color-dark));
+    background: linear-gradient(var(--color-bg2), var(--color-dark));
     text-align: center;
+    color: var(--color-bg3);
 }
 
 /* ---------------------------------------------------- */
@@ -141,7 +153,8 @@ nav a {
 
 .active {
     color: var(--color-bg1);
-    text-shadow: 0px 0px 35px var(--color-light), 0px 0px 30px var(--color-light), 0px 0px 25px var(--color-light), 0px 0px 20px var(--color-light), 0px 0px 15px var(--color-light), 0px 0px 10px var(--color-light), 0px 0px 5px var(--color-light), 0px 0px 1px var(--color-light);
+    font-weight: bolder;
+    text-shadow: 1px 1px 6px var(--color-bg3), -1px -1px 6px var(--color-bg3), 0px 0px 6px var(--color-bg3);
 }
 
 /* ---------------------------------------------------- */
@@ -163,9 +176,9 @@ nav a {
 	        appearance: none;
 }
 
-#nav-hider:checked::before {
+/* #nav-hider:checked::before {
     content: '≡';
-}
+} */
 
 #nav-hider:not(:checked)::before {
     content: '«';
@@ -193,6 +206,10 @@ nav a {
 
 #nav-hider:checked {
     top: var(--nav-half);
+    background: url(./img/burger.svg) no-repeat center;
+    background-size: contain;
+    border-radius: var(--vh);
+    opacity: 0;
     -webkit-animation: movebutton 1s forwards;
             animation: movebutton 1s forwards;
 }
@@ -494,7 +511,7 @@ nav a {
     width: 100%;
     text-align: center;
     color: var(--color-bg1);
-    text-shadow: -2px -1px 0px var(--color-bg2), 2px 1px 0px var(--color-light);
+    text-shadow: -2px -1px 3px var(--color-bg2), 2px 1px 3px var(--color-light);
     font-size: 22px;
     font-weight: bold;
 }
@@ -662,16 +679,14 @@ form, input, textarea, button {
 
 @-webkit-keyframes movebutton {
     100% {
-        background: var(--color-bg1);
-        border-radius: var(--vh);
+        opacity: 1;
         top: 0;
     }
 }
 
 @keyframes movebutton {
     100% {
-        background: var(--color-bg1);
-        border-radius: var(--vh);
+        opacity: 1;
         top: 0;
     }
 }

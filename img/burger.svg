@@ -1,0 +1,9 @@
+<svg width="600" height="600" style="background: rgb(50, 50, 255);" xmlns="http://www.w3.org/2000/svg">
+<g>
+  <title>Layer 1</title>
+  <rect fill="#cacaf1" stroke="#000" x="125" y="275.00001" width="350" height="50" id="svg_2" rx="23" stroke-width="0"/>
+  <rect fill="#ffffff" stroke="#000" x="316" y="301" width="0" height="1" id="svg_4"/>
+  <rect fill="#cacaf1" stroke="#000" x="125" y="150" width="350" height="50" id="svg_6" rx="23" stroke-width="0"/>
+  <rect fill="#cacaf1" stroke="#000" x="125" y="400" width="350" height="50" id="svg_8" rx="23" stroke-width="0"/>
+ </g>
+</svg>
