@@ -31,6 +31,20 @@ body {
     background: var(--color-light);
 }
 
+::-moz-selection {
+    background: var(--color-bg1);
+    color:      var(--color-light);
+}
+
+::selection {
+    background: var(--color-bg1);
+    color:      var(--color-light);
+}
+
+a {
+    color: var(--color-bg1);
+}
+
 .noselect {
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -73,8 +87,8 @@ hr {
 .fade-footer {
     border: none;
     padding: calc(var(--vh) * 4);
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), to(var(--color-bg2)));
     background: -o-linear-gradient(var(--color-light), var(--color-bg2));
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), to(var(--color-bg2)));
     background: linear-gradient(var(--color-light), var(--color-bg2));
 }
 
@@ -103,9 +117,9 @@ hr {
 
 #footer {
     padding: calc(var(--vh) * 4);
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg2)), to(var(--color-dark)));
-    background: -o-linear-gradient(var(--color-bg2), var(--color-dark));
-    background: linear-gradient(var(--color-bg2), var(--color-dark));
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg2)), to(var(--color-bg1)));
+    background: -o-linear-gradient(var(--color-bg2), var(--color-bg1));
+    background: linear-gradient(var(--color-bg2), var(--color-bg1));
     text-align: center;
     color: var(--color-bg3);
 }
@@ -154,7 +168,7 @@ nav a {
 .active {
     color: var(--color-bg1);
     font-weight: bolder;
-    text-shadow: 1px 1px 6px var(--color-bg3), -1px -1px 6px var(--color-bg3), 0px 0px 6px var(--color-bg3);
+    text-shadow: 1px 1px 2px var(--color-bg3), -1px -1px 2px var(--color-bg3), 0px 0px 2px var(--color-bg3);
 }
 
 /* ---------------------------------------------------- */
@@ -175,10 +189,6 @@ nav a {
 	   -moz-appearance: none;
 	        appearance: none;
 }
-
-/* #nav-hider:checked::before {
-    content: '≡';
-} */
 
 #nav-hider:not(:checked)::before {
     content: '«';
@@ -422,6 +432,31 @@ nav a {
     background: linear-gradient(var(--color-bg2), var(--color-light));
 }
 
+.logorow {
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    max-width:90rem;
+    text-align:center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 50px;
+}
+  
+.logorow img {
+    margin-top: 5%;
+    max-height: 10vh;
+}
+
 .imgsplit {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -463,7 +498,11 @@ nav a {
 }
 
 .rightimg .imgsplit--text {
-    margin-left: 30px;
+    margin-left: 100px;
+}
+
+.leftimg .imgsplit--text {
+    margin-right: 100px;
 }
 
 .leftimg .imgsplit--text,
@@ -625,6 +664,14 @@ form, input, textarea, button {
     
     .imgsplit div {
         width: 100%;
+    }
+
+    .logorow {
+        padding-bottom: 20px;
+    }
+    
+    .logorow img {
+        max-height: 8vw;
     }
 
     .rightimg,
