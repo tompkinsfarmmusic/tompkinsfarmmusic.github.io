@@ -11,6 +11,15 @@ var items = [
     '<div class="sshowbox sshow10"></div>',
     '<div class="sshowbox sshow11"></div>',
     '<div class="sshowbox sshow12"></div>',
+    '<div class="sshowbox sshow13"></div>',
+    '<div class="sshowbox sshow14"></div>',
+    '<div class="sshowbox sshow15"></div>',
+    '<div class="sshowbox sshow16"></div>',
+    '<div class="sshowbox sshow17"></div>',
+    '<div class="sshowbox sshow18"></div>',
+    '<div class="sshowbox sshow19"></div>',
+    '<div class="sshowbox sshow20"></div>',
+    '<div class="sshowbox sshow21"></div>'
 ];
 
 document.getElementById('slideshow').innerHTML = items.toString().replaceAll(',','');

@@ -13,7 +13,7 @@
     /* slideshow */
     --sshow-height:     15vw; /* 10vw; */
     --sshow-width:      21vw; /* 14vw; */
-    --numslides:        12;
+    --numslides:        21;
     /* vh */
     --nav-height:              calc(var(--vh) * 8);
     --nav-height-neg:          calc(var(--nav-height) * -1);
@@ -253,17 +253,17 @@ nav a {
 /* ---------------------------------------------------- */
 
 #jumbo {
+    background: -o-linear-gradient(rgba(var(--color-bg1-rgb), 0.8), 
+                                rgba(var(--color-bg3-rgb), 0.8) 60%, 
+                                rgba(var(--color-bg2-rgb), 0.8) 80%, 
+                                rgba(var(--color-light-rgb), 0.8) 100%),
+                url(https://static01.nyt.com/images/2017/07/23/realestate/23LIVING-slide-N8DB/23LIVING-slide-N8DB-videoSixteenByNineJumbo1600.jpg);
     background: -webkit-gradient(linear, 
                                 left top, left bottom, 
                                 from(rgba(var(--color-bg1-rgb), 0.8)), 
                                 color-stop(60%, rgba(var(--color-bg3-rgb), 0.8)), 
                                 color-stop(80%, rgba(var(--color-bg2-rgb), 0.8)), 
                                 to(rgba(var(--color-light-rgb), 0.8))),
-                url(https://static01.nyt.com/images/2017/07/23/realestate/23LIVING-slide-N8DB/23LIVING-slide-N8DB-videoSixteenByNineJumbo1600.jpg);
-    background: -o-linear-gradient(rgba(var(--color-bg1-rgb), 0.8), 
-                                rgba(var(--color-bg3-rgb), 0.8) 60%, 
-                                rgba(var(--color-bg2-rgb), 0.8) 80%, 
-                                rgba(var(--color-light-rgb), 0.8) 100%),
                 url(https://static01.nyt.com/images/2017/07/23/realestate/23LIVING-slide-N8DB/23LIVING-slide-N8DB-videoSixteenByNineJumbo1600.jpg);
     background: linear-gradient(rgba(var(--color-bg1-rgb), 0.8), 
                                 rgba(var(--color-bg3-rgb), 0.8) 60%, 
@@ -276,7 +276,7 @@ nav a {
 
 #logoarea {
     height: calc(var(--vh) * 58);
-    background: url('./img/TFM4 transparent black 500.png') center no-repeat;
+    background: url('./img/TFM4-transparent-black-3000.svg') center no-repeat;
     background-size: contain;
 }
 
@@ -401,6 +401,51 @@ nav a {
     background-size: contain;
 }
 
+.sshow13 {
+    background: url(./img/bobby.JPG) no-repeat;
+    background-size: contain;
+}
+
+.sshow14 {
+    background: url(./img/riviera.jpg) no-repeat;
+    background-size: contain;
+}
+
+.sshow15 {
+    background: url(./img/alectro.jpg) no-repeat;
+    background-size: contain;
+}
+
+.sshow16 {
+    background: url(./img/kelly.jpg) no-repeat;
+    background-size: contain;
+}
+
+.sshow17 {
+    background: url(./img/craig.jpeg) no-repeat;
+    background-size: contain;
+}
+
+.sshow18 {
+    background: url(./img/peter.PNG) no-repeat;
+    background-size: contain;
+}
+
+.sshow19 {
+    background: url(./img/milton.jpg) no-repeat;
+    background-size: contain;
+}
+
+.sshow20 {
+    background: url(./img/joncharles.jpg) no-repeat;
+    background-size: contain;
+}
+
+.sshow21 {
+    background: url(https://i5.walmartimages.com/asr/617b3111-6e0a-428f-b56b-a75864cdd437.56c64b8d9c7fd9218e5c5f1fdae8b9b4.jpeg) no-repeat;
+    background-size: cover;
+}
+
 /* ---------------------------------------------------- */
 
 #intro--songwriter-first {
@@ -455,7 +500,7 @@ nav a {
   
 .logorow img {
     margin-top: 5%;
-    max-height: 10vh;
+    max-height: calc(var(--vh) * 10);
 }
 
 .imgsplit {
@@ -498,12 +543,9 @@ nav a {
             flex-flow: row-reverse;
 }
 
-.rightimg .imgsplit--text {
-    margin-left: 100px;
-}
-
-.leftimg .imgsplit--text {
-    margin-right: 100px;
+.rightimg .imgsplit--text,
+.leftimg .imgsplit--img {
+    margin-left: 60px;
 }
 
 .leftimg .imgsplit--text,
@@ -636,7 +678,27 @@ nav a {
     text-align: center;
 }
 
-form, input, textarea, button {
+#formsection input, textarea {
+    background: var(--color-light-rgb);
+    color: var(--color-dark);
+    border: groove rgba(var(--color-bg1-rgb),0.4);
+    border-radius: 5px;
+}
+
+#formsection input:focus,
+textarea:focus {
+    outline: none;
+}
+
+#formsection button {
+    background: var(--color-bg1);
+    color: var(--color-light);
+    border: outset var(--color-bg1);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+form, #formsection input, textarea, #formsection button {
     font-size: 22px;
 }
 
@@ -668,7 +730,8 @@ form, input, textarea, button {
     }
 
     .logorow {
-        padding-bottom: 20px;
+        margin-top: 30px;
+        padding-bottom: 30px;
     }
     
     .logorow img {
