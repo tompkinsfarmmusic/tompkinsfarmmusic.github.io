@@ -257,19 +257,19 @@ nav a {
                                 rgba(var(--color-bg3-rgb), 0.8) 60%, 
                                 rgba(var(--color-bg2-rgb), 0.8) 80%, 
                                 rgba(var(--color-light-rgb), 0.8) 100%),
-                url(./img/yonk.jpg);
+                url(./img/yonk.webp);
     background: -webkit-gradient(linear, 
                                 left top, left bottom, 
                                 from(rgba(var(--color-bg1-rgb), 0.8)), 
                                 color-stop(60%, rgba(var(--color-bg3-rgb), 0.8)), 
                                 color-stop(80%, rgba(var(--color-bg2-rgb), 0.8)), 
                                 to(rgba(var(--color-light-rgb), 0.8))),
-                url(./img/yonk.jpg);
+                url(./img/yonk.webp);
     background: linear-gradient(rgba(var(--color-bg1-rgb), 0.8), 
                                 rgba(var(--color-bg3-rgb), 0.8) 60%, 
                                 rgba(var(--color-bg2-rgb), 0.8) 80%, 
                                 rgba(var(--color-light-rgb), 0.8) 100%),
-                url(./img/yonk.jpg);
+                url(./img/yonk.webp);
     height: var(--content-height);
     position: relative;
 }
@@ -342,107 +342,107 @@ nav a {
 }
 
 .sshow01 {
-    background: url(./img/ray.jpg) no-repeat;
+    background: url(./img/ray.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow02 {
-    background: url(./img/davestruestory.jpg) no-repeat;
+    background: url(./img/davestruestory.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow03 {
-    background: url(./img/courtney.PNG) no-repeat;
+    background: url(./img/courtney.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow04 {
-    background: url(./img/neil.JPG) no-repeat;
+    background: url(./img/neil.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow05 {
-    background: url(./img/lipbone.png) no-repeat;
+    background: url(./img/lipbone.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow06 {
-    background: url(./img/sixthletter.PNG) no-repeat;
+    background: url(./img/sixthletter.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow07 {
-    background: url(./img/mlumbo.jpg) no-repeat;
+    background: url(./img/mlumbo.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow08 {
-    background: url(./img/marc.jpeg) no-repeat;
+    background: url(./img/marc.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow09 {
-    background: url(./img/buick6.jpg) no-repeat;
+    background: url(./img/buick6.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow10 {
-    background: url(./img/julie.jpg) no-repeat;
+    background: url(./img/julie.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow11 {
-    background: url(./img/linda.jpg) no-repeat;
+    background: url(./img/linda.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow12 {
-    background: url(./img/squealer.JPG) no-repeat;
+    background: url(./img/squealer.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow13 {
-    background: url(./img/bobby.JPG) no-repeat;
+    background: url(./img/bobby.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow14 {
-    background: url(./img/riviera.jpg) no-repeat;
+    background: url(./img/riviera.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow15 {
-    background: url(./img/alectro.jpg) no-repeat;
+    background: url(./img/alectro.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow16 {
-    background: url(./img/kelly.jpg) no-repeat;
+    background: url(./img/kelly.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow17 {
-    background: url(./img/craig.jpeg) no-repeat;
+    background: url(./img/craig.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow18 {
-    background: url(./img/peter.PNG) no-repeat;
+    background: url(./img/peter.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow19 {
-    background: url(./img/milton.jpg) no-repeat;
+    background: url(./img/milton.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow20 {
-    background: url(./img/joncharles.jpg) no-repeat;
+    background: url(./img/joncharles.webp) no-repeat;
     background-size: contain;
 }
 
 .sshow21 {
-    background: url(./img/michelangelo.jpeg) no-repeat;
+    background: url(./img/michelangelo.webp) no-repeat;
     background-size: cover;
 }
 
