@@ -257,19 +257,19 @@ nav a {
                                 rgba(var(--color-bg3-rgb), 0.8) 60%, 
                                 rgba(var(--color-bg2-rgb), 0.8) 80%, 
                                 rgba(var(--color-light-rgb), 0.8) 100%),
-                url(https://static01.nyt.com/images/2017/07/23/realestate/23LIVING-slide-N8DB/23LIVING-slide-N8DB-videoSixteenByNineJumbo1600.jpg);
+                url(./img/yonk.jpg);
     background: -webkit-gradient(linear, 
                                 left top, left bottom, 
                                 from(rgba(var(--color-bg1-rgb), 0.8)), 
                                 color-stop(60%, rgba(var(--color-bg3-rgb), 0.8)), 
                                 color-stop(80%, rgba(var(--color-bg2-rgb), 0.8)), 
                                 to(rgba(var(--color-light-rgb), 0.8))),
-                url(https://static01.nyt.com/images/2017/07/23/realestate/23LIVING-slide-N8DB/23LIVING-slide-N8DB-videoSixteenByNineJumbo1600.jpg);
+                url(./img/yonk.jpg);
     background: linear-gradient(rgba(var(--color-bg1-rgb), 0.8), 
                                 rgba(var(--color-bg3-rgb), 0.8) 60%, 
                                 rgba(var(--color-bg2-rgb), 0.8) 80%, 
                                 rgba(var(--color-light-rgb), 0.8) 100%),
-                url(https://static01.nyt.com/images/2017/07/23/realestate/23LIVING-slide-N8DB/23LIVING-slide-N8DB-videoSixteenByNineJumbo1600.jpg);
+                url(./img/yonk.jpg);
     height: var(--content-height);
     position: relative;
 }
@@ -442,7 +442,7 @@ nav a {
 }
 
 .sshow21 {
-    background: url(https://i5.walmartimages.com/asr/617b3111-6e0a-428f-b56b-a75864cdd437.56c64b8d9c7fd9218e5c5f1fdae8b9b4.jpeg) no-repeat;
+    background: url(./img/michelangelo.jpeg) no-repeat;
     background-size: cover;
 }
 
