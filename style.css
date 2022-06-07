@@ -774,13 +774,13 @@ form, #formsection input, textarea, #formsection button {
 
 @media only screen and (max-height: 480px) {
     nav ul {
-        font-size: 3.5vw;
+        font-size: 2vw;
     }
 }
 
 @media only screen and (max-width: 480px) and (orientation: landscape) {
     nav ul {
-        font-size: 3.5vw;
+        font-size: 2vw;
     }
 }
 
