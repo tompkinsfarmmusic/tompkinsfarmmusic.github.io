@@ -491,7 +491,7 @@ nav a {
             flex-flow: row wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    max-width:90rem;
+    /* max-width:90rem; */
     text-align:center;
     padding-left: 5vw;
     padding-right: 5vw;
@@ -500,7 +500,18 @@ nav a {
   
 .logorow img {
     margin-top: 5%;
-    max-height: calc(var(--vh) * 10);
+}
+
+#agency-row img {
+    max-height: calc(var(--vh) * 9);
+}
+
+#streaming-row img {
+    max-height: calc(var(--vh) * 11);
+}
+
+#supervisor-row img {
+    max-height: calc(var(--vh) * 20);
 }
 
 .imgsplit {
