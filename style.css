@@ -11,8 +11,8 @@
     --color-bg3:        rgb(160, 231, 253);
     --color-bg3-rgb:    182, 226, 255;
     /* slideshow */
-    --sshow-height:     15vw; /* 10vw; */
-    --sshow-width:      21vw; /* 14vw; */
+    --sshow-height:     15vw;
+    --sshow-width:      21vw;
     --numslides:        21;
     /* vh */
     --nav-height:              calc(var(--vh) * 8);
@@ -83,6 +83,12 @@ hr {
     background: -o-linear-gradient(var(--color-bg2), var(--color-bg3), var(--color-light));
     background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg2)), color-stop(var(--color-bg3)), to(var(--color-light)));
     background: linear-gradient(var(--color-bg2), var(--color-bg3), var(--color-light));
+}
+
+.fade-frombg1 {
+    border: none;
+    padding: calc(var(--vh) * 8);
+    background: linear-gradient(var(--color-bg1), var(--color-bg2), var(--color-light));
 }
 
 .fade-footer {
@@ -449,33 +455,23 @@ nav a {
 /* ---------------------------------------------------- */
 
 #intro--songwriter-first {
-    background: -o-linear-gradient(var(--color-light), var(--color-bg3));
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), to(var(--color-bg3)));
-    background: linear-gradient(var(--color-light), var(--color-bg3));
+    background: linear-gradient(var(--color-light), var(--color-bg2));
 }
 
 #intro--communication {
-    background: -o-linear-gradient(var(--color-bg3), var(--color-bg2));
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg3)), to(var(--color-bg2)));
-    background: linear-gradient(var(--color-bg3), var(--color-bg2));
-}
-
-#intro--registration {
-    background: -o-linear-gradient(var(--color-bg2), var(--color-bg3));
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg2)), to(var(--color-bg3)));
     background: linear-gradient(var(--color-bg2), var(--color-bg3));
 }
 
-#intro--revenue {
-    background: -o-linear-gradient(var(--color-bg3), var(--color-bg2));
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg3)), to(var(--color-bg2)));
+#intro--registration {
     background: linear-gradient(var(--color-bg3), var(--color-bg2));
 }
 
+#intro--revenue {
+    background: linear-gradient(var(--color-bg2), var(--color-bg3));
+}
+
 #intro--supervisors {
-    background: -o-linear-gradient(var(--color-bg2), var(--color-light));
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg2)), to(var(--color-light)));
-    background: linear-gradient(var(--color-bg2), var(--color-light));
+    background: linear-gradient(var(--color-bg3), var(--color-bg1));
 }
 
 .logorow {
@@ -693,6 +689,10 @@ nav a {
     color: var(--color-dark);
     border: groove rgba(var(--color-bg1-rgb),0.4);
     border-radius: 5px;
+}
+
+::placeholder {
+    color: rgba(var(--color-bg1-rgb),0.4);
 }
 
 #formsection input:focus,
