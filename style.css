@@ -70,15 +70,19 @@ h1 {
 
 h2 {
     font-size: 28px;
+    width: fit-content;
 }
 
 hr {
     border: 1px solid var(--color-dark);
-    margin: 0;
+    padding: 1.25px;
+    margin-right: -5px;
+    background: var(--color-dark);
 }
 
 .fade {
     border: none;
+    margin: 0;
     padding: calc(var(--vh) * 8);
     background: -o-linear-gradient(var(--color-bg2), var(--color-bg3), var(--color-light));
     background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg2)), color-stop(var(--color-bg3)), to(var(--color-light)));
@@ -87,12 +91,14 @@ hr {
 
 .fade-frombg1 {
     border: none;
+    margin: 0;
     padding: calc(var(--vh) * 8);
     background: linear-gradient(var(--color-bg1), var(--color-bg2), var(--color-light));
 }
 
 .fade-footer {
     border: none;
+    margin: 0;
     padding: calc(var(--vh) * 4);
     background: -o-linear-gradient(var(--color-light), var(--color-bg2));
     background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), to(var(--color-bg2)));
@@ -101,6 +107,7 @@ hr {
 
 .fade-2way {
     border: none;
+    margin: 0;
     padding: calc(var(--vh) * 8);
     background: -o-linear-gradient(var(--color-light), rgba(var(--color-bg2-rgb),.3) 20%, var(--color-light));
     background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), color-stop(20%, rgba(var(--color-bg2-rgb),.3)), to(var(--color-light)));
@@ -259,23 +266,12 @@ nav a {
 /* ---------------------------------------------------- */
 
 #jumbo {
-    background: -o-linear-gradient(rgba(var(--color-bg1-rgb), 0.8), 
-                                rgba(var(--color-bg3-rgb), 0.8) 60%, 
-                                rgba(var(--color-bg2-rgb), 0.8) 80%, 
-                                rgba(var(--color-light-rgb), 0.8) 100%),
-                url(./img/yonk.webp);
-    background: -webkit-gradient(linear, 
-                                left top, left bottom, 
-                                from(rgba(var(--color-bg1-rgb), 0.8)), 
-                                color-stop(60%, rgba(var(--color-bg3-rgb), 0.8)), 
-                                color-stop(80%, rgba(var(--color-bg2-rgb), 0.8)), 
-                                to(rgba(var(--color-light-rgb), 0.8))),
-                url(./img/yonk.webp);
     background: linear-gradient(rgba(var(--color-bg1-rgb), 0.8), 
                                 rgba(var(--color-bg3-rgb), 0.8) 60%, 
                                 rgba(var(--color-bg2-rgb), 0.8) 80%, 
                                 rgba(var(--color-light-rgb), 0.8) 100%),
-                url(./img/yonk.webp);
+                url(./img/yonk.webp) no-repeat center;
+    background-size: cover;
     height: var(--content-height);
     position: relative;
 }
