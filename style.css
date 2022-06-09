@@ -119,6 +119,11 @@ hr {
     margin-right: 5vw;
 }
 
+.buffer-intro {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
 #content {
     position: absolute;
     top: var(--nav-half);
@@ -718,7 +723,7 @@ form, #formsection input, textarea, #formsection button {
         --sshow-width:  52.5vw;
     }
     
-    .buffer {
+    .buffer, .buffer-intro {
         margin-left: 14vw;
         margin-right: 14vw;
     }
@@ -742,6 +747,10 @@ form, #formsection input, textarea, #formsection button {
     
     .logorow img {
         max-height: 8vw;
+    }
+
+    #supervisor-row img {
+        max-height: calc(var(--vh) * 15);
     }
 
     .rightimg,
