@@ -70,6 +70,8 @@ h1 {
 
 h2 {
     font-size: 28px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -93,6 +95,8 @@ hr {
     border: none;
     margin: 0;
     padding: calc(var(--vh) * 8);
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg1)), color-stop(var(--color-bg2)), to(var(--color-light)));
+    background: -o-linear-gradient(var(--color-bg1), var(--color-bg2), var(--color-light));
     background: linear-gradient(var(--color-bg1), var(--color-bg2), var(--color-light));
 }
 
@@ -271,6 +275,18 @@ nav a {
 /* ---------------------------------------------------- */
 
 #jumbo {
+    background: -webkit-gradient(linear, 
+                                left top, left bottom, 
+                                from(rgba(var(--color-bg1-rgb), 0.8)), 
+                                color-stop(60%, rgba(var(--color-bg3-rgb), 0.8)), 
+                                color-stop(80%, rgba(var(--color-bg2-rgb), 0.8)), 
+                                to(rgba(var(--color-light-rgb), 0.8))),
+                url(./img/yonk.webp) no-repeat center;
+    background: -o-linear-gradient(rgba(var(--color-bg1-rgb), 0.8), 
+                                rgba(var(--color-bg3-rgb), 0.8) 60%, 
+                                rgba(var(--color-bg2-rgb), 0.8) 80%, 
+                                rgba(var(--color-light-rgb), 0.8) 100%),
+                url(./img/yonk.webp) no-repeat center;
     background: linear-gradient(rgba(var(--color-bg1-rgb), 0.8), 
                                 rgba(var(--color-bg3-rgb), 0.8) 60%, 
                                 rgba(var(--color-bg2-rgb), 0.8) 80%, 
@@ -456,22 +472,32 @@ nav a {
 /* ---------------------------------------------------- */
 
 #intro--songwriter-first {
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), to(var(--color-bg2)));
+    background: -o-linear-gradient(var(--color-light), var(--color-bg2));
     background: linear-gradient(var(--color-light), var(--color-bg2));
 }
 
 #intro--communication {
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg2)), to(var(--color-bg3)));
+    background: -o-linear-gradient(var(--color-bg2), var(--color-bg3));
     background: linear-gradient(var(--color-bg2), var(--color-bg3));
 }
 
 #intro--registration {
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg3)), to(var(--color-bg2)));
+    background: -o-linear-gradient(var(--color-bg3), var(--color-bg2));
     background: linear-gradient(var(--color-bg3), var(--color-bg2));
 }
 
 #intro--revenue {
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg2)), to(var(--color-bg3)));
+    background: -o-linear-gradient(var(--color-bg2), var(--color-bg3));
     background: linear-gradient(var(--color-bg2), var(--color-bg3));
 }
 
 #intro--supervisors {
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg3)), to(var(--color-bg1)));
+    background: -o-linear-gradient(var(--color-bg3), var(--color-bg1));
     background: linear-gradient(var(--color-bg3), var(--color-bg1));
 }
 
@@ -690,6 +716,22 @@ nav a {
     color: var(--color-dark);
     border: groove rgba(var(--color-bg1-rgb),0.4);
     border-radius: 5px;
+}
+
+::-webkit-input-placeholder {
+    color: rgba(var(--color-bg1-rgb),0.4);
+}
+
+::-moz-placeholder {
+    color: rgba(var(--color-bg1-rgb),0.4);
+}
+
+:-ms-input-placeholder {
+    color: rgba(var(--color-bg1-rgb),0.4);
+}
+
+::-ms-input-placeholder {
+    color: rgba(var(--color-bg1-rgb),0.4);
 }
 
 ::placeholder {
