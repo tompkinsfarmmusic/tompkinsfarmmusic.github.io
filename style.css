@@ -491,7 +491,6 @@ nav a {
             flex-flow: row wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    /* max-width:90rem; */
     text-align:center;
     padding-left: 5vw;
     padding-right: 5vw;
@@ -503,7 +502,7 @@ nav a {
 }
 
 #agency-row img {
-    max-height: calc(var(--vh) * 9);
+    max-height: calc(var(--vh) * 8);
 }
 
 #streaming-row img {
