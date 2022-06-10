@@ -841,6 +841,78 @@ form, #formsection input, textarea, #formsection button {
     }
 }
 
+@media only screen and (min-aspect-ratio: 16/10) {
+    .buffer-intro {
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
+}
+
+@media only screen and (min-aspect-ratio: 18/9) {
+    :root {
+        --sshow-height: 10vw;
+        --sshow-width:  14vw;
+    }
+}
+
+@media only screen and (min-aspect-ratio: 21/9) {
+    :root {
+        --sshow-height: 7.5vw;
+        --sshow-width:  10.5vw;
+    }
+
+    .buffer-intro {
+        margin-left: 30vw;
+        margin-right: 30vw;
+    }
+}
+
+@media only screen and (max-aspect-ratio: 9/16) {
+    #agency-row img {
+        max-height: calc(var(--vh) * 5);
+    }
+    
+    #streaming-row img {
+        max-height: calc(var(--vh) * 6);
+    }
+    
+    #supervisor-row img {
+        max-height: calc(var(--vh) * 12);
+    }
+}
+
+@media only screen and (max-aspect-ratio: 9/18) {
+    nav ul {
+        font-size: 5vw;
+    }
+
+    #agency-row img {
+        max-height: calc(var(--vh) * 5);
+    }
+    
+    #streaming-row img {
+        max-height: calc(var(--vh) * 5);
+    }
+    
+    #supervisor-row img {
+        max-height: calc(var(--vh) * 12);
+    }
+}
+
+@media only screen and (max-aspect-ratio: 9/20) {
+    #agency-row img {
+        max-height: calc(var(--vh) * 4);
+    }
+    
+    #streaming-row img {
+        max-height: calc(var(--vh) * 5);
+    }
+    
+    #supervisor-row img {
+        max-height: calc(var(--vh) * 12);
+    }
+}
+
 /* ---------------------------------------------------- */
 /* ---------------------------------------------------- */
 /* ---------------------------------------------------- */
