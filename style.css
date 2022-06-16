@@ -867,6 +867,20 @@ form, #formsection input, textarea, #formsection button {
     }
 }
 
+@media only screen and (max-aspect-ratio: 4/3) {     /* probably needs editing */
+    #agency-row img {
+        max-height: calc(var(--vh) * 5);
+    }
+    
+    #streaming-row img {
+        max-height: calc(var(--vh) * 6);
+    }
+    
+    #supervisor-row img {
+        max-height: calc(var(--vh) * 12);
+    }
+}
+
 @media only screen and (max-aspect-ratio: 9/16) {
     #agency-row img {
         max-height: calc(var(--vh) * 5);
