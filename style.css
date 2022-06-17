@@ -819,8 +819,9 @@ form, #formsection input, textarea, #formsection button {
         width: 294px;
     }
 
-    .contactcontainer {
-        font-size: 13px;
+    #contactcontainer {
+        /* font-size: 13px; */
+        font-size: smaller;
     }
 
     #socials {
