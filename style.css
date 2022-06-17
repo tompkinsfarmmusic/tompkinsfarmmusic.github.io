@@ -819,6 +819,10 @@ form, #formsection input, textarea, #formsection button {
         width: 294px;
     }
 
+    .contactcontainer {
+        font-size: smaller;
+    }
+
     #socials {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
