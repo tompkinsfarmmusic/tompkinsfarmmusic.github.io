@@ -275,6 +275,7 @@ nav a {
 }
 
 h1 {
+    text-align: center;
     padding-top: 40px;
 }
 
@@ -422,6 +423,8 @@ form, #formsection input, textarea, #formsection button {
 
 #footer {
     padding: calc(var(--vh) * 4);
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), to(var(--color-bg1)));
+    background: -o-linear-gradient(var(--color-light), var(--color-bg1));
     background: linear-gradient(var(--color-light), var(--color-bg1));
     text-align: center;
     color: var(--color-dark);
