@@ -2,6 +2,7 @@
     /* colors */
     --color-dark:       rgb(21, 25, 85);
     --color-light:      rgb(240, 243, 255);
+    --color-light-rgb:  240, 243, 255;
     --color-bg1:        rgb(79, 79, 255);
     --color-bg1-rgb:    50, 50, 255;
     --color-bg2:        rgb(219, 224, 255);
@@ -19,7 +20,7 @@
 body {
     margin: 0;
     font-family: 'Arial Narrow', 'Helvetica', sans-serif;
-    font-size: 1.25em;
+    font-size: 1.3em;
     color: var(--color-dark);
 }
 
@@ -50,7 +51,7 @@ body {
     width: 100vw;
 }
 
-.buffer, .buffer-intro {
+.buffer {
     margin-left: 14vw;
     margin-right: 14vw;
 }
@@ -274,9 +275,60 @@ nav a {
     position: relative;
 }
 
+#jumbo > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    height: var(--content-height); 
+    -webkit-box-orient: horizontal; 
+    -webkit-box-direction: normal; 
+        -ms-flex-flow: row; 
+            flex-flow: row; 
+    -ms-flex-pack: distribute; 
+        justify-content: space-around;
+}
+
+#jumbo > div > img {
+    display: block; 
+    max-height: calc(var(--vh) * 90); 
+    max-width: 84vw; 
+    margin: auto;
+}
+
+#jumbo > img {
+    top: 0; 
+    position: fixed; 
+    height: var(--vh100); 
+    min-width: 100vw; 
+    z-index: -3; 
+    opacity: 0.25;
+}
+
 h1 {
     text-align: center;
     padding-top: 40px;
+    font-size: 2.5em;
+}
+
+#about .buffer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    -webkit-box-orient: horizontal; 
+    -webkit-box-direction: normal; 
+        -ms-flex-flow: row; 
+            flex-flow: row; 
+    -ms-flex-pack: distribute; 
+        justify-content: space-around;
+}
+
+#about .buffer > div {
+    width: 30%;
+}
+
+#about .buffer > img {
+    width: 60%; 
+    border-radius: 10px;
 }
 
 #roster {
@@ -309,11 +361,12 @@ h1 {
 
 .rostertext {
     position: absolute;
+    bottom: 5%;
     width: 100%;
     text-align: center;
     color: var(--color-bg1);
     text-shadow: -2px -1px 3px var(--color-bg2), 2px 1px 3px var(--color-light);
-    font-size: 22px;
+    font-size: 1.3em;
     font-weight: bold;
 }
 
@@ -333,9 +386,9 @@ h1 {
 }
 
 #contact {
-    background: -o-linear-gradient(var(--color-light), var(--color-bg3), var(--color-light));
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), color-stop(var(--color-bg3)), to(var(--color-light)));
-    background: linear-gradient(var(--color-light), var(--color-bg3), var(--color-light));
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(var(--color-light-rgb),0.0)), color-stop(rgba(var(--color-light-rgb), 1.0)), color-stop(var(--color-bg3)), to(var(--color-light)));
+    background: -o-linear-gradient(rgba(var(--color-light-rgb),0.0), rgba(var(--color-light-rgb), 1.0), var(--color-bg3), var(--color-light));
+    background: linear-gradient(rgba(var(--color-light-rgb),0.0), rgba(var(--color-light-rgb), 1.0), var(--color-bg3), var(--color-light));
 }
 
 #contactcontainer {
@@ -423,22 +476,49 @@ form, #formsection input, textarea, #formsection button {
 
 #footer {
     padding: calc(var(--vh) * 4);
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-light)), to(var(--color-bg1)));
-    background: -o-linear-gradient(var(--color-light), var(--color-bg1));
-    background: linear-gradient(var(--color-light), var(--color-bg1));
+    background: -webkit-gradient(
+                    linear,
+                    left top, left bottom,
+                    from(var(--color-light)),
+                    color-stop(rgba(var(--color-light-rgb),0.4)),
+                    color-stop(rgba(var(--color-light-rgb),0.2)),
+                    color-stop(rgba(var(--color-light-rgb),0.1)),
+                    color-stop(rgba(var(--color-light-rgb),0.05)),
+                    to(rgba(var(--color-light-rgb),0.0)));
+    background: -o-linear-gradient(
+                    var(--color-light),
+                    rgba(var(--color-light-rgb),0.4),
+                    rgba(var(--color-light-rgb),0.2),
+                    rgba(var(--color-light-rgb),0.1),
+                    rgba(var(--color-light-rgb),0.05),
+                    rgba(var(--color-light-rgb),0.0));
+    background: linear-gradient(
+                    var(--color-light),
+                    rgba(var(--color-light-rgb),0.4),
+                    rgba(var(--color-light-rgb),0.2),
+                    rgba(var(--color-light-rgb),0.1),
+                    rgba(var(--color-light-rgb),0.05),
+                    rgba(var(--color-light-rgb),0.0));
     text-align: center;
     color: var(--color-dark);
 }
 
 @media only screen and (max-width: 640px) {
     
-    .buffer, .buffer-intro {
+    .buffer {
         margin-left: 14vw;
         margin-right: 14vw;
     }
 
-    .buffer-intro div {
-        width: 72vw !important;
+    #about .buffer {
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+            -ms-flex-flow: column !important;
+                flex-flow: column !important;
+    }
+    
+    #about .buffer > * {
+        width: 100% !important;
     }
 
     .rosterbox {
@@ -469,13 +549,6 @@ form, #formsection input, textarea, #formsection button {
 @media only screen and (max-width: 480px) and (orientation: landscape) {
     nav ul {
         font-size: 2vw;
-    }
-}
-
-@media only screen and (min-aspect-ratio: 21/9) {
-    .buffer-intro {
-        margin-left: 30vw;
-        margin-right: 30vw;
     }
 }
 
