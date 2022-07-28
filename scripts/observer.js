@@ -12,9 +12,8 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    [ document.getElementById('jumbo'), document.getElementById('intro'), 
-        document.getElementById('roster'), document.getElementById('about'),
-        document.getElementById('contact')
+    [ document.getElementById('jumbo'), document.getElementById('about'), 
+      document.getElementById('roster'), document.getElementById('contact')
     ].forEach((e) => {
         observer.observe(e);
     });
