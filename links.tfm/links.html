@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Links - Tompkins Farm Music</title>
+    <link
+      rel="icon"
+      href="https://tompkinsfarmmusic.com/img/TFM4-transparent-black-3000.svg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      :root {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        --col-btn-pri: white;
+        --col-btn-sec: rgb(49, 90, 202);
+        font-size: 14pt;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.7)
+          ),
+          url("./New York City_GettyImages-1347979016 (1).webp")
+            center center fixed;
+        background-size: cover;
+      }
+      .main {
+        margin: auto;
+        padding-left: calc(30vw - 1vh);
+        padding-right: 30vw;
+      }
+      .banner {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        text-align: center;
+        border: 2px solid black;
+        box-shadow: 1vh 1vh 0px black;
+        background: linear-gradient(
+            rgba(118, 154, 255, 0.7),
+            rgba(49, 90, 202, 0.7)
+          ),
+          url("./bg.svg");
+        background-size: cover;
+      }
+      h1 {
+        text-shadow: -1px -1px 0px black, 1px 1px 0px black, -1px 1px 0px black,
+          1px -1px 0px black;
+      }
+      .banner h1 {
+        font-size: 2.5em;
+      }
+      .content {
+        display: grid;
+        grid-auto-columns: minmax(0, 1fr);
+        grid-template-areas:
+          "website     email"
+          "stream-head stream-head"
+          "youtube     spotify"
+          "social-head social-head"
+          "instagram   twitter";
+      }
+      .spacetop {
+        height: 1vh;
+      }
+      .spacebot {
+        height: 3vh;
+      }
+      .lnk {
+        padding: 2vh;
+        background: var(--col-btn-sec);
+        box-shadow: 1vh 1vh 0vh black;
+        color: var(--col-btn-pri);
+        border: 2px solid black;
+        text-decoration: none;
+        display: grid;
+        grid-auto-columns: minmax(0, 1fr);
+        grid-template-areas: "icon text text text";
+      }
+      .btn-grid-item {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .btn-grid-icon {
+        justify-content: center;
+      }
+      .lnk i {
+        font-size: 1.8em;
+      }
+      .lnk:hover {
+        background: var(--col-btn-pri);
+        box-shadow: 1vh 1vh 0vh var(--col-btn-sec);
+        color: var(--col-btn-sec);
+      }
+      .website {
+        grid-area: website;
+      }
+      .email {
+        grid-area: email;
+      }
+      .section-head {
+        text-align: center;
+      }
+      .section-head h1 {
+        font-size: 2em;
+      }
+      .stream-head {
+        grid-area: stream-head;
+      }
+      .youtube {
+        --col-btn-sec: #ff0000;
+        grid-area: youtube;
+      }
+      .spotify {
+        --col-btn-sec: #1db954;
+        grid-area: spotify;
+      }
+      .social-head {
+        grid-area: social-head;
+      }
+      .instagram {
+        --col-btn-sec: #cd486b;
+        grid-area: instagram;
+      }
+      .twitter {
+        --col-btn-sec: #00acee;
+        grid-area: twitter;
+      }
+      @media (max-aspect-ratio: 5/9),
+        (max-width: 750px),
+        (min-aspect-ratio: 5/3) {
+        :root {
+          font-size: 12pt;
+        }
+        .banner h1 {
+          font-size: 2em;
+        }
+        .section-head h1 {
+          font-size: 1.4em;
+        }
+      }
+      @media (max-aspect-ratio: 5/4) and (max-width: 750px) {
+        .main {
+          padding-left: calc(8vw - 1vh);
+          padding-right: 8vw;
+        }
+      }
+      @media (min-aspect-ratio: 10/9) and (max-height: 500px) {
+        .content {
+          grid-template-areas:
+            "website     website      email       email"
+            "stream-head stream-head  social-head social-head"
+            "youtube     youtube      instagram   instagram"
+            "spotify     spotify      twitter     twitter";
+        }
+        .main {
+          padding-left: calc(15vw - 1vh);
+          padding-right: 15vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="spacetop"></div>
+      <div class="banner">
+        <h1>Tompkins Farm Music</h1>
+      </div>
+      <div class="content">
+        <a href="https://tompkinsfarmmusic.com" class="lnk website">
+          <div class="btn-grid-item btn-grid-icon">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+          </div>
+          <div class="btn-grid-item">Website</div>
+        </a>
+        <a href="mailto:tompkinsfarmhand@gmail.com" class="lnk email">
+          <div class="btn-grid-item btn-grid-icon">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </div>
+          <div class="btn-grid-item">Email</div>
+        </a>
+        <div class="section-head stream-head">
+          <h1>Listen to our catalog:</h1>
+        </div>
+        <a
+          href="https://www.youtube.com/channel/UCxsryHLtDTsLgPG3_cP310Q"
+          class="lnk youtube"
+        >
+          <div class="btn-grid-item btn-grid-icon">
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+          </div>
+          <div class="btn-grid-item">YouTube</div>
+        </a>
+        <a
+          href="https://open.spotify.com/user/31j3ulspyyflrml5cuwm7tucmaqu"
+          class="lnk spotify"
+        >
+          <div class="btn-grid-item btn-grid-icon">
+            <i class="fa fa-spotify" aria-hidden="true"></i>
+          </div>
+          <div class="btn-grid-item">Spotify</div>
+        </a>
+        <div class="section-head social-head">
+          <h1>Follow us on social:</h1>
+        </div>
+        <a
+          href="https://www.instagram.com/tompkinsfarmmusic/"
+          class="lnk instagram"
+        >
+          <div class="btn-grid-item btn-grid-icon">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </div>
+          <div class="btn-grid-item">Instagram</div>
+        </a>
+        <a href="https://twitter.com/tmpkinsfarmusic" class="lnk twitter">
+          <div class="btn-grid-item btn-grid-icon">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </div>
+          <div class="btn-grid-item">Twitter</div>
+        </a>
+      </div>
+      <div class="spacebot"></div>
+    </div>
+  </body>
+</html>
