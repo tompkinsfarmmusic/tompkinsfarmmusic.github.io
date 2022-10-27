@@ -45,6 +45,10 @@
         padding-right: 30vw;
       }
       .banner {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
         padding-left: 2vw;
         padding-right: 2vw;
         text-align: center;
@@ -55,7 +59,7 @@
             rgba(49, 90, 202, 0.7)
           ),
           url("./bg.svg");
-        background-size: cover;
+        background-size: cover, cover;
       }
       h1 {
         text-shadow: -1px -1px 0px black, 1px 1px 0px black, -1px 1px 0px black,
@@ -180,6 +184,8 @@
     <div class="main">
       <div class="spacetop"></div>
       <div class="banner">
+        <!-- <h1>Tompkins Farm Music</h1> -->
+        <img src="./halved 250.png" style="max-height: 50vh; margin-top: -15px; margin-bottom: -30px;" />
         <h1>Tompkins Farm Music</h1>
       </div>
       <div class="content">
